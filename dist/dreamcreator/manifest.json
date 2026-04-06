@@ -1,0 +1,404 @@
+{
+  "schemaVersion": 1,
+  "appId": "cc.dreamapp.dreamcreator",
+  "manifestVersion": "2026.04.06.1",
+  "defaultChannel": "stable",
+  "updatedAt": "2026-04-06T02:34:59.876Z",
+  "channels": {
+    "stable": {
+      "app": {
+        "source": {
+          "provider": "github-release",
+          "owner": "arnoldhao",
+          "repo": "dreamcreator"
+        },
+        "version": "1.3.0",
+        "publishedAt": "2025-12-11T05:38:02Z",
+        "notes": "- deps: upgrade deno and ffmpeg (#29) by @arnoldhao\n- chore: add ejs/deno desc (#28) by @arnoldhao\n- deps: upgrade wails and glob (#24) by @arnoldhao\n- chore: add deps (#25) by @arnoldhao\n\n## ✨ Features\n\n- feat: delete outdated dependencies automatically (#27) by @arnoldhao\n- feat: support yt-dlp-ejs (#26) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v1.3.0",
+        "platforms": {
+          "darwin-arm64": {
+            "artifactName": "DreamCreator_1.3.0_mac_arm64.dmg",
+            "contentType": "application/x-apple-diskimage",
+            "size": 118037408,
+            "sha256": "ec53b82f1ef205b2d91aaa6bdb28d0e6c306936a13a0ec8cc834e95dfc4b5be2",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_arm64.dmg",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_arm64.dmg",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "app-installer",
+            "artifactType": "dmg"
+          },
+          "darwin-amd64": {
+            "artifactName": "DreamCreator_1.3.0_mac_intel.dmg",
+            "contentType": "application/x-apple-diskimage",
+            "size": 119477214,
+            "sha256": "de5ec1b82c5df8cf979c54c9c4fc21e959f68e091d867140c359d18adc8821fe",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_intel.dmg",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_intel.dmg",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "app-installer",
+            "artifactType": "dmg"
+          },
+          "windows-amd64": {
+            "artifactName": "Dream.Creator.Setup_1.3.0_windows_x64.exe",
+            "contentType": "application/x-msdos-program",
+            "size": 106784943,
+            "sha256": "8e57645d1f65fe2ef787f4934bb9c83510f7559b6de120a182c923b16d633f85",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/Dream.Creator.Setup_1.3.0_windows_x64.exe",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/Dream.Creator.Setup_1.3.0_windows_x64.exe",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "app-installer",
+            "artifactType": "exe"
+          }
+        }
+      },
+      "tools": {
+        "yt-dlp": {
+          "displayName": "yt-dlp",
+          "kind": "external-tool",
+          "source": {
+            "provider": "github-release",
+            "owner": "yt-dlp",
+            "repo": "yt-dlp"
+          },
+          "upstreamVersion": "2026.03.17",
+          "recommendedVersion": "2026.03.17",
+          "publishedAt": "2026-03-17T23:42:33Z",
+          "autoUpdate": true,
+          "required": true,
+          "notes": "Pinned to a validated release for the stable channel.",
+          "releasePage": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.03.17",
+          "compatibility": {
+            "minAppVersion": "1.0.0",
+            "maxAppVersion": null
+          },
+          "platforms": {
+            "darwin-arm64": {
+              "artifactName": "yt-dlp_macos",
+              "contentType": "application/octet-stream",
+              "size": 36762752,
+              "sha256": "e80c47b3ce712acee51d5e3d4eace2d181b44d38f1942c3a32e3c7ff53cd9ed5",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_macos",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_macos",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "binary",
+              "artifactType": "raw-binary",
+              "executableName": "yt-dlp"
+            },
+            "darwin-amd64": {
+              "artifactName": "yt-dlp_macos",
+              "contentType": "application/octet-stream",
+              "size": 36762752,
+              "sha256": "e80c47b3ce712acee51d5e3d4eace2d181b44d38f1942c3a32e3c7ff53cd9ed5",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_macos",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp_macos",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "binary",
+              "artifactType": "raw-binary",
+              "executableName": "yt-dlp"
+            },
+            "windows-amd64": {
+              "artifactName": "yt-dlp.exe",
+              "contentType": "application/x-msdownload",
+              "size": 18448981,
+              "sha256": "3db811b366b2da47337d2fcfdfe5bbd9a258dad3f350c54974f005df115a1545",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp.exe",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp.exe",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "binary",
+              "artifactType": "raw-binary",
+              "executableName": "yt-dlp.exe"
+            }
+          }
+        },
+        "ffmpeg": {
+          "displayName": "FFmpeg",
+          "kind": "external-tool",
+          "source": {
+            "provider": "github-release",
+            "owner": "jellyfin",
+            "repo": "jellyfin-ffmpeg"
+          },
+          "upstreamVersion": "7.1.3-5",
+          "recommendedVersion": "7.1.3-5",
+          "publishedAt": "2026-04-05T16:03:50Z",
+          "autoUpdate": false,
+          "required": true,
+          "notes": "Manual review required before changing stable channel binaries.",
+          "releasePage": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/tag/v7.1.3-5",
+          "compatibility": {
+            "minAppVersion": "1.0.0",
+            "maxAppVersion": null
+          },
+          "platforms": {
+            "darwin-arm64": {
+              "artifactName": "jellyfin-ffmpeg_7.1.3-5_portable_macarm64-gpl.tar.xz",
+              "contentType": "application/x-xz",
+              "size": 31068640,
+              "sha256": "d1c22355cc8c915b4b0f5c0c5dc776ef61e133f96cce738672344578b713b171",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_macarm64-gpl.tar.xz",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_macarm64-gpl.tar.xz",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "archive",
+              "artifactType": "tar.xz",
+              "binaries": [
+                "ffmpeg",
+                "ffprobe"
+              ]
+            },
+            "darwin-amd64": {
+              "artifactName": "jellyfin-ffmpeg_7.1.3-5_portable_mac64-gpl.tar.xz",
+              "contentType": "application/x-xz",
+              "size": 36594048,
+              "sha256": "f3ac6beb0ea27497ed88378b700a66d71d340c8f6ab3233427f12f2b64de3db6",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_mac64-gpl.tar.xz",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_mac64-gpl.tar.xz",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "archive",
+              "artifactType": "tar.xz",
+              "binaries": [
+                "ffmpeg",
+                "ffprobe"
+              ]
+            },
+            "windows-amd64": {
+              "artifactName": "jellyfin-ffmpeg_7.1.3-5_portable_win64-clang-gpl.zip",
+              "contentType": "application/zip",
+              "size": 60245199,
+              "sha256": "c9c10529a765bbd01e4cfb01c518634340f3e7d9f9364f759f1f3cefc49fb11e",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_win64-clang-gpl.zip",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_win64-clang-gpl.zip",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "archive",
+              "artifactType": "zip",
+              "binaries": [
+                "ffmpeg.exe",
+                "ffprobe.exe"
+              ]
+            }
+          }
+        },
+        "bun": {
+          "displayName": "Bun",
+          "kind": "external-tool",
+          "source": {
+            "provider": "github-release",
+            "owner": "oven-sh",
+            "repo": "bun"
+          },
+          "upstreamVersion": "1.3.11",
+          "recommendedVersion": "1.3.11",
+          "publishedAt": "2026-03-18T04:31:40Z",
+          "autoUpdate": false,
+          "required": false,
+          "notes": "Pinned to a validated Bun release for the stable channel.",
+          "releasePage": "https://github.com/oven-sh/bun/releases/tag/bun-v1.3.11",
+          "compatibility": {
+            "minAppVersion": "1.0.0",
+            "maxAppVersion": null
+          },
+          "platforms": {
+            "darwin-arm64": {
+              "artifactName": "bun-darwin-aarch64.zip",
+              "contentType": "application/zip",
+              "size": 22342227,
+              "sha256": "6f5a3467ed9caec4795bf78cd476507d9f870c7d57b86c945fcb338126772ffc",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-darwin-aarch64.zip",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-darwin-aarch64.zip",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "archive",
+              "artifactType": "zip",
+              "binaries": [
+                "bun"
+              ]
+            },
+            "darwin-amd64": {
+              "artifactName": "bun-darwin-x64.zip",
+              "contentType": "application/zip",
+              "size": 24671586,
+              "sha256": "c4fe2b9247218b0295f24e895aaec8fee62e74452679a9026b67eacbd611a286",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-darwin-x64.zip",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-darwin-x64.zip",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "archive",
+              "artifactType": "zip",
+              "binaries": [
+                "bun"
+              ]
+            },
+            "windows-amd64": {
+              "artifactName": "bun-windows-x64.zip",
+              "contentType": "application/zip",
+              "size": 41281263,
+              "sha256": "066f8694f8b7d8df592452746d18f01710d4053e93030922dbc6e8c34a8c4b9f",
+              "sources": [
+                {
+                  "name": "gh-proxy",
+                  "kind": "proxy",
+                  "url": "https://gh-proxy.com/https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-windows-x64.zip",
+                  "priority": 10,
+                  "enabled": true
+                },
+                {
+                  "name": "github",
+                  "kind": "origin",
+                  "url": "https://github.com/oven-sh/bun/releases/download/bun-v1.3.11/bun-windows-x64.zip",
+                  "priority": 20,
+                  "enabled": true
+                }
+              ],
+              "installStrategy": "archive",
+              "artifactType": "zip",
+              "binaries": [
+                "bun.exe"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
