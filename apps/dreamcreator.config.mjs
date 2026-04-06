@@ -65,25 +65,25 @@ export default {
         platforms: {
           "darwin-arm64": {
             asset: {
-              name: "DreamCreator_{version}_mac_arm64.dmg",
+              name: "dreamcreator-macos-arm64-{version}.zip",
             },
             install: {
-              strategy: "app-installer",
-              artifactType: "dmg",
+              strategy: "archive",
+              artifactType: "zip",
             },
           },
           "darwin-amd64": {
             asset: {
-              name: "DreamCreator_{version}_mac_intel.dmg",
+              name: "dreamcreator-macos-x64-{version}.zip",
             },
             install: {
-              strategy: "app-installer",
-              artifactType: "dmg",
+              strategy: "archive",
+              artifactType: "zip",
             },
           },
           "windows-amd64": {
             asset: {
-              name: "Dream.Creator.Setup_{version}_windows_x64.exe",
+              name: "dreamcreator-windows-x64-{version}-installer.exe",
             },
             install: {
               strategy: "app-installer",
@@ -275,25 +275,25 @@ export default {
         platforms: {
           "darwin-arm64": {
             asset: {
-              match: "^DreamCreator_.*_mac_arm64\\.dmg$",
+              match: "^dreamcreator-macos-arm64-.*\\.zip$",
             },
             install: {
-              strategy: "app-installer",
-              artifactType: "dmg",
+              strategy: "archive",
+              artifactType: "zip",
             },
           },
           "darwin-amd64": {
             asset: {
-              match: "^DreamCreator_.*_mac_intel\\.dmg$",
+              match: "^dreamcreator-macos-x64-.*\\.zip$",
             },
             install: {
-              strategy: "app-installer",
-              artifactType: "dmg",
+              strategy: "archive",
+              artifactType: "zip",
             },
           },
           "windows-amd64": {
             asset: {
-              match: "^Dream\\.Creator\\.Setup_.*_windows_x64\\.exe$",
+              match: "^dreamcreator-windows-x64-.*-installer\\.exe$",
             },
             install: {
               strategy: "app-installer",

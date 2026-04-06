@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.dreamcreator",
-  "manifestVersion": "2026.04.06.13",
+  "manifestVersion": "2026.04.06.1",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-06T12:31:35.207Z",
+  "updatedAt": "2026-04-06T13:11:42.927Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,76 +12,76 @@
           "owner": "arnoldhao",
           "repo": "dreamcreator"
         },
-        "version": "1.3.0",
-        "publishedAt": "2025-12-11T05:38:02Z",
-        "notes": "- deps: upgrade deno and ffmpeg (#29) by @arnoldhao\n- chore: add ejs/deno desc (#28) by @arnoldhao\n- deps: upgrade wails and glob (#24) by @arnoldhao\n- chore: add deps (#25) by @arnoldhao\n\n## ✨ Features\n\n- feat: delete outdated dependencies automatically (#27) by @arnoldhao\n- feat: support yt-dlp-ejs (#26) by @arnoldhao",
-        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v1.3.0",
+        "version": "2.0.0",
+        "publishedAt": "2026-04-06T12:51:10Z",
+        "notes": "- chore: fix artifact name (#35) by @arnoldhao\n- chore: fix ci (#34) by @arnoldhao\n- chore: security upgrade (#33) by @arnoldhao\n- chore: follow workflow\\_run (#32) by @arnoldhao\n- breaking: Orchestration (#31) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.0",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "DreamCreator_1.3.0_mac_arm64.dmg",
-            "contentType": "application/x-apple-diskimage",
-            "size": 118037408,
-            "sha256": "ec53b82f1ef205b2d91aaa6bdb28d0e6c306936a13a0ec8cc834e95dfc4b5be2",
+            "artifactName": "dreamcreator-macos-arm64-2.0.0.zip",
+            "contentType": "application/zip",
+            "size": 29478861,
+            "sha256": "def684f1098606f20c3cb4983ac47afe7553bc4beab0bb025389bc38f686a8ee",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_arm64.dmg",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-arm64-2.0.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_arm64.dmg",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-arm64-2.0.0.zip",
                 "priority": 20,
                 "enabled": true
               }
             ],
-            "installStrategy": "app-installer",
-            "artifactType": "dmg"
+            "installStrategy": "archive",
+            "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "DreamCreator_1.3.0_mac_intel.dmg",
-            "contentType": "application/x-apple-diskimage",
-            "size": 119477214,
-            "sha256": "de5ec1b82c5df8cf979c54c9c4fc21e959f68e091d867140c359d18adc8821fe",
+            "artifactName": "dreamcreator-macos-x64-2.0.0.zip",
+            "contentType": "application/zip",
+            "size": 31780476,
+            "sha256": "0aaab2005201a92916977601b09e4d6f6cc3483dba70ca797bf5bee2f468caf9",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_intel.dmg",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-x64-2.0.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/DreamCreator_1.3.0_mac_intel.dmg",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-x64-2.0.0.zip",
                 "priority": 20,
                 "enabled": true
               }
             ],
-            "installStrategy": "app-installer",
-            "artifactType": "dmg"
+            "installStrategy": "archive",
+            "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "Dream.Creator.Setup_1.3.0_windows_x64.exe",
+            "artifactName": "dreamcreator-windows-x64-2.0.0-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 106784943,
-            "sha256": "8e57645d1f65fe2ef787f4934bb9c83510f7559b6de120a182c923b16d633f85",
+            "size": 32507321,
+            "sha256": "bc63958bb6759c52027620cc54d6dccb307492ce3e22ecee15f699fcb48b9104",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/Dream.Creator.Setup_1.3.0_windows_x64.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-windows-x64-2.0.0-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v1.3.0/Dream.Creator.Setup_1.3.0_windows_x64.exe",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-windows-x64-2.0.0-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -400,6 +400,5 @@
         }
       }
     }
-  },
-  "sourceRevision": "1d77748ea51d6a25b6d7e380056b22c9b9d086a4"
+  }
 }
