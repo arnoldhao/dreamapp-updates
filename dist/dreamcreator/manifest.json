@@ -3,7 +3,7 @@
   "appId": "cc.dreamapp.dreamcreator",
   "manifestVersion": "2026.04.06.1",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-06T02:34:59.876Z",
+  "updatedAt": "2026-04-06T02:42:11.882Z",
   "channels": {
     "stable": {
       "app": {
@@ -400,5 +400,6 @@
         }
       }
     }
-  }
+  },
+  "sourceRevision": "5ab87421c2636e345faf9e2fcb13122d3c6868ee"
 }
