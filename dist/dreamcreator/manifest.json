@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.dreamcreator",
-  "manifestVersion": "2026.04.07.46",
+  "manifestVersion": "2026.04.07.47",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-07T09:35:04.280Z",
+  "updatedAt": "2026-04-07T10:04:06.010Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "dreamcreator"
         },
-        "version": "2.0.0",
-        "publishedAt": "2026-04-06T12:51:10Z",
-        "notes": "- chore: fix artifact name (#35) by @arnoldhao\n- chore: fix ci (#34) by @arnoldhao\n- chore: security upgrade (#33) by @arnoldhao\n- chore: follow workflow\\_run (#32) by @arnoldhao\n- breaking: Orchestration (#31) by @arnoldhao",
-        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.0",
+        "version": "2.0.1",
+        "publishedAt": "2026-04-07T09:44:26Z",
+        "notes": "- chore: optimize several pages (#36) by @arnoldhao\n- chore: fix artifact name (#35) by @arnoldhao\n- chore: fix ci (#34) by @arnoldhao\n- chore: security upgrade (#33) by @arnoldhao\n- chore: follow workflow\\_run (#32) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.1",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "dreamcreator-macos-arm64-2.0.0.zip",
+            "artifactName": "dreamcreator-macos-arm64-2.0.1.zip",
             "contentType": "application/zip",
-            "size": 29478861,
-            "sha256": "def684f1098606f20c3cb4983ac47afe7553bc4beab0bb025389bc38f686a8ee",
+            "size": 29081044,
+            "sha256": "d524def16d9468a1043314ee6a20ae6c269ed345f2a78b6ba179b8e52a3a1296",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-arm64-2.0.0.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.1/dreamcreator-macos-arm64-2.0.1.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-arm64-2.0.0.zip",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.1/dreamcreator-macos-arm64-2.0.1.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "dreamcreator-macos-x64-2.0.0.zip",
+            "artifactName": "dreamcreator-macos-x64-2.0.1.zip",
             "contentType": "application/zip",
-            "size": 31780476,
-            "sha256": "0aaab2005201a92916977601b09e4d6f6cc3483dba70ca797bf5bee2f468caf9",
+            "size": 31809187,
+            "sha256": "ee64d53d9285012bdb177d765361a1ff11fccfdf2f16d6094b41d32993af59f3",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-x64-2.0.0.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.1/dreamcreator-macos-x64-2.0.1.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-macos-x64-2.0.0.zip",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.1/dreamcreator-macos-x64-2.0.1.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "dreamcreator-windows-x64-2.0.0-installer.exe",
+            "artifactName": "dreamcreator-windows-x64-2.0.1-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 32507321,
-            "sha256": "bc63958bb6759c52027620cc54d6dccb307492ce3e22ecee15f699fcb48b9104",
+            "size": 32533001,
+            "sha256": "2764843c57428c6b2c39e9e733fa13b8a49b75adb3345864fbe5a7eb607268a2",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-windows-x64-2.0.0-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.1/dreamcreator-windows-x64-2.0.1-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.0/dreamcreator-windows-x64-2.0.0-installer.exe",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.1/dreamcreator-windows-x64-2.0.1-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -401,5 +401,5 @@
       }
     }
   },
-  "sourceRevision": "bbaf090abb7f09ca94cd0dad924e8f87a5432c93"
+  "sourceRevision": "09741b717b2963166e1c235d1a9d00bc5726fcc3"
 }
