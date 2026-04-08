@@ -5,6 +5,7 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { copyDirectory, ensureDir, writeJson, assert } from "./lib/helpers.mjs";
+import { isReleaseIncompleteError } from "./lib/github.mjs";
 import { buildAppManifest } from "./lib/manifest.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -22,6 +23,7 @@ const runNumber = String(process.env.GITHUB_RUN_NUMBER || "1");
 
 const appConfigs = await loadAppConfigs(appsDir, options.app);
 assert(appConfigs.length > 0, "no app configs matched the requested filter");
+const previousBuilds = await loadExistingBuilds(distDir, appConfigs, publicBaseUrl);
 
 await fs.rm(distDir, { recursive: true, force: true });
 await ensureDir(distDir);
@@ -29,14 +31,28 @@ await copyDirectory(staticDir, distDir);
 
 const generated = [];
 for (const app of appConfigs) {
-  const built = await buildAppManifest({
-    appConfig: app.config,
-    appName: app.name,
-    publicBaseUrl,
-    githubToken,
-    sourceRevision,
-    runNumber,
-  });
+  let built;
+  try {
+    built = await buildAppManifest({
+      appConfig: app.config,
+      appName: app.name,
+      publicBaseUrl,
+      githubToken,
+      sourceRevision,
+      runNumber,
+    });
+  } catch (error) {
+    const previous = previousBuilds.get(app.name);
+    if (!isReleaseIncompleteError(error) || !previous) {
+      throw error;
+    }
+
+    built = previous;
+    console.warn(
+      `[dreamapp-updates] reuse previous ${built.path}/manifest.json because the latest release is incomplete: ${error.message}`,
+    );
+  }
+
   const manifestPath = path.join(distDir, built.path, "manifest.json");
   await writeJson(manifestPath, built.manifest);
   generated.push(built);
@@ -98,5 +114,31 @@ async function loadAppConfigs(directory, appFilter) {
       config: module.default,
     });
   }
+  return result;
+}
+
+async function loadExistingBuilds(directory, appConfigs, publicBaseUrl) {
+  const result = new Map();
+
+  for (const app of appConfigs) {
+    const manifestPath = path.join(directory, app.config.path, "manifest.json");
+    let manifest;
+    try {
+      manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
+    } catch (error) {
+      if (error && error.code === "ENOENT") {
+        continue;
+      }
+      throw error;
+    }
+
+    result.set(app.name, {
+      appId: app.config.appId,
+      path: app.config.path,
+      manifest,
+      manifestUrl: `${publicBaseUrl}/${app.config.path}/manifest.json`,
+    });
+  }
+
   return result;
 }

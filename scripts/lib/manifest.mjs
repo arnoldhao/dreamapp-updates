@@ -35,7 +35,11 @@ export async function buildAppManifest({ appConfig, appName, publicBaseUrl, gith
         console.warn(`[dreamapp-updates] skip optional channel ${appName}/${channelName}: ${error.message}`);
         continue;
       }
-      throw new Error(`${appName}/${channelName}: ${error.message}`);
+      const contextualError = new Error(`${appName}/${channelName}: ${error.message}`, { cause: error });
+      if (error?.code) {
+        contextualError.code = error.code;
+      }
+      throw contextualError;
     }
   }
 

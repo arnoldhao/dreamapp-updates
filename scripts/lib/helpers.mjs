@@ -1,6 +1,13 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
+const STRIPPED_RELEASE_NOTE_SECTIONS = [
+  {
+    startMarker: "dreamapp-release-header:start",
+    endMarker: "dreamapp-release-header:end",
+  },
+];
+
 export function assert(condition, message) {
   if (!condition) {
     throw new Error(message);
@@ -56,10 +63,7 @@ export function renderTemplate(template, values) {
 }
 
 export function summarizeText(text, maxLength = 600) {
-  const normalized = String(text || "")
-    .replace(/\r\n/g, "\n")
-    .replace(/\n{3,}/g, "\n\n")
-    .trim();
+  const normalized = sanitizeReleaseNotes(text);
   if (!normalized) {
     return "";
   }
@@ -85,6 +89,19 @@ export function buildNotes(noteConfig, fallbackText) {
   return summarizeText(fallbackText, 600);
 }
 
+export function sanitizeReleaseNotes(text) {
+  let normalized = String(text || "").replace(/\r\n?/g, "\n");
+
+  for (const section of STRIPPED_RELEASE_NOTE_SECTIONS) {
+    const start = escapeRegExp(section.startMarker);
+    const end = escapeRegExp(section.endMarker);
+    const pattern = new RegExp(`<!--\\s*${start}\\s*-->[\\s\\S]*?<!--\\s*${end}\\s*-->\\n*`, "gi");
+    normalized = normalized.replace(pattern, "");
+  }
+
+  return normalized.replace(/\n{3,}/g, "\n\n").trim();
+}
+
 export function buildDownloadSources(templates, rawUrl) {
   return [...templates]
     .map((template) => ({
@@ -99,4 +116,8 @@ export function buildDownloadSources(templates, rawUrl) {
 
 export function isHexSha256(value) {
   return /^[a-f0-9]{64}$/i.test(String(value || ""));
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }

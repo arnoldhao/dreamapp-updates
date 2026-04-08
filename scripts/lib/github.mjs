@@ -69,6 +69,15 @@ export class GitHubClient {
   }
 }
 
+export class ReleaseIncompleteError extends Error {
+  constructor(message, details = {}) {
+    super(message);
+    this.name = "ReleaseIncompleteError";
+    this.code = "ERR_RELEASE_INCOMPLETE";
+    Object.assign(this, details);
+  }
+}
+
 export function selectRelease(releases, selector) {
   assert(selector?.type, "release selector type is required");
   const usableReleases = releases.filter((release) => !release.draft);
@@ -107,7 +116,11 @@ export function findAsset(assets, assetSpec, variables) {
     const expectedName = renderTemplate(assetSpec.name, variables);
     const match = assets.find((asset) => asset.name === expectedName);
     if (!match) {
-      throw new Error(`release asset not found: ${expectedName}`);
+      throw new ReleaseIncompleteError(`release asset not found: ${expectedName}`, {
+        expectedAssetName: expectedName,
+        releaseTag: variables?.tag,
+        releaseVersion: variables?.version,
+      });
     }
     return match;
   }
@@ -116,7 +129,11 @@ export function findAsset(assets, assetSpec, variables) {
     const pattern = new RegExp(renderTemplate(assetSpec.match, variables));
     const match = assets.find((asset) => pattern.test(asset.name));
     if (!match) {
-      throw new Error(`release asset match not found: ${pattern.source}`);
+      throw new ReleaseIncompleteError(`release asset match not found: ${pattern.source}`, {
+        expectedAssetPattern: pattern.source,
+        releaseTag: variables?.tag,
+        releaseVersion: variables?.version,
+      });
     }
     return match;
   }
@@ -127,9 +144,20 @@ export function findAsset(assets, assetSpec, variables) {
 export function extractSha256(asset) {
   const digest = String(asset?.digest || "").trim();
   if (!digest.toLowerCase().startsWith("sha256:")) {
-    throw new Error(`asset ${asset?.name ?? "unknown"} is missing sha256 digest`);
+    throw new ReleaseIncompleteError(`asset ${asset?.name ?? "unknown"} is missing sha256 digest`, {
+      assetName: asset?.name ?? "",
+    });
   }
   return digest.slice("sha256:".length);
+}
+
+export function isReleaseIncompleteError(error) {
+  return Boolean(
+    error &&
+      (error.code === "ERR_RELEASE_INCOMPLETE" ||
+        error.name === "ReleaseIncompleteError" ||
+        isReleaseIncompleteError(error.cause)),
+  );
 }
 
 async function safeReadText(response) {
