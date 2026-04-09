@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.dreamcreator",
-  "manifestVersion": "2026.04.09.109",
+  "manifestVersion": "2026.04.09.111",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-09T03:15:46.375Z",
+  "updatedAt": "2026-04-09T05:21:38.303Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "dreamcreator"
         },
-        "version": "2.0.2",
-        "publishedAt": "2026-04-08T06:05:44Z",
-        "notes": "- chore: fix update ability and optimize several dialog  (#37) by @arnoldhao\n  - add optimize patch\n  - fix update ability in Windows\n  - fix update ability in macOS\n  - support PR body\n  - support markdown in about release note dialog\n  - remove unused key",
-        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.2",
+        "version": "2.0.3",
+        "publishedAt": "2026-04-09T04:28:23Z",
+        "notes": "- optimize: optimize performances and several pages (#40) by @arnoldhao\n  - optimize library overview page\n  - optimize cron overview page\n  - fix scrolling in notification sheet\n  - optimize settings page\n  - fix ui fonts\n  - optimize subtitle style\n  - optimize web fetch\n  - optimize browser use\n  - optimize heartbeat\n  - optimize approval\n  - optimize workspace page\n  - optimize avatar\n  - compress control panel in workspace page\n  - add guideline on subtitle preview area\n  - optimize chat composer\n- chore: add gatekeeper desc (#39) by @arnoldhao\n- chore: support show download hint on release notes (#38) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.3",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "dreamcreator-macos-arm64-2.0.2.zip",
+            "artifactName": "dreamcreator-macos-arm64-2.0.3.zip",
             "contentType": "application/zip",
-            "size": 29083993,
-            "sha256": "2288d12244808b066eed051eeeb7e610e1faf6d95cb0789205805b46928ede8d",
+            "size": 29099997,
+            "sha256": "1e0dbf28bd2f69ceff8aabe976233bfa0dd186abd49b3afa06f1e8bac269dcb4",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.2/dreamcreator-macos-arm64-2.0.2.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.3/dreamcreator-macos-arm64-2.0.3.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.2/dreamcreator-macos-arm64-2.0.2.zip",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.3/dreamcreator-macos-arm64-2.0.3.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "dreamcreator-macos-x64-2.0.2.zip",
+            "artifactName": "dreamcreator-macos-x64-2.0.3.zip",
             "contentType": "application/zip",
-            "size": 31813712,
-            "sha256": "2c29a7d9df4f33c9260643758eadca15543b6c899bd3901e81e5cb9434242226",
+            "size": 31827942,
+            "sha256": "d4525f214a40d0fac9c191981547e1f5af4764fc8b651b60027ef7672fb11759",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.2/dreamcreator-macos-x64-2.0.2.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.3/dreamcreator-macos-x64-2.0.3.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.2/dreamcreator-macos-x64-2.0.2.zip",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.3/dreamcreator-macos-x64-2.0.3.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "dreamcreator-windows-x64-2.0.2-installer.exe",
+            "artifactName": "dreamcreator-windows-x64-2.0.3-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 32539825,
-            "sha256": "1ea9b012657aadf119bfb8f710ffbb92ac32b667cd51c6652d0815c3acd4e446",
+            "size": 32556553,
+            "sha256": "a839ca5280c855404ef779a0950f7ba31c97050954950ba24ae21b78db2a52ee",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.2/dreamcreator-windows-x64-2.0.2-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.3/dreamcreator-windows-x64-2.0.3-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.2/dreamcreator-windows-x64-2.0.2-installer.exe",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.3/dreamcreator-windows-x64-2.0.3-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -401,5 +401,5 @@
       }
     }
   },
-  "sourceRevision": "783de65ea717aa63dff18b6dbeffba58e757efd3"
+  "sourceRevision": "591f3985bf6f8d89116858bf313c109a5a5a8a4d"
 }
