@@ -1,5 +1,5 @@
 import { buildDownloadSources, buildNotes, formatManifestVersion, isHexSha256, assert } from "./helpers.mjs";
-import { GitHubClient, extractSha256, findAsset, resolveReleaseVersion, selectRelease } from "./github.mjs";
+import { GitHubClient, extractSha256, findAsset, isReleaseIncompleteError, resolveReleaseVersion, selectRelease } from "./github.mjs";
 
 export async function buildAppManifest({ appConfig, appName, publicBaseUrl, githubToken, sourceRevision, runNumber }) {
   validateAppConfig(appConfig, appName);
@@ -19,9 +19,17 @@ export async function buildAppManifest({ appConfig, appName, publicBaseUrl, gith
     manifest.sourceRevision = sourceRevision;
   }
 
+  const redirects = [];
+  let redirectsIncomplete = false;
+  const redirectWarnings = [];
   for (const [channelName, channelConfig] of Object.entries(appConfig.channels)) {
     try {
-      const entry = await buildChannelEntry({
+      const {
+        entry,
+        redirects: channelRedirects,
+        redirectsIncomplete: channelRedirectsIncomplete,
+        redirectWarnings: channelRedirectWarnings,
+      } = await buildChannelEntry({
         channelName,
         channelConfig,
         appConfig,
@@ -29,6 +37,9 @@ export async function buildAppManifest({ appConfig, appName, publicBaseUrl, gith
       });
       if (entry) {
         manifest.channels[channelName] = entry;
+        redirects.push(...channelRedirects);
+        redirectsIncomplete = redirectsIncomplete || Boolean(channelRedirectsIncomplete);
+        redirectWarnings.push(...(channelRedirectWarnings ?? []));
       }
     } catch (error) {
       if (channelConfig.optional) {
@@ -52,13 +63,17 @@ export async function buildAppManifest({ appConfig, appName, publicBaseUrl, gith
     path: appConfig.path,
     manifest,
     manifestUrl: `${publicBaseUrl}/${appConfig.path}/manifest.json`,
+    redirects,
+    redirectsIncomplete,
+    redirectWarnings,
   };
 }
 
 async function buildChannelEntry({ channelName, channelConfig, appConfig, client }) {
-  const appEntry = await buildAppReleaseEntry({
+  const { entry: appEntry, redirects, redirectsIncomplete, redirectWarnings } = await buildAppReleaseEntry({
     channelName,
     appReleaseConfig: channelConfig.app,
+    appPath: appConfig.path,
     defaults: appConfig.defaults,
     client,
   });
@@ -74,29 +89,58 @@ async function buildChannelEntry({ channelName, channelConfig, appConfig, client
   }
 
   return {
-    app: appEntry,
-    tools,
+    entry: {
+      app: appEntry,
+      tools,
+    },
+    redirects,
+    redirectsIncomplete,
+    redirectWarnings,
   };
 }
 
-async function buildAppReleaseEntry({ channelName, appReleaseConfig, defaults, client }) {
+async function buildAppReleaseEntry({ channelName, appReleaseConfig, appPath, defaults, client }) {
   assert(appReleaseConfig?.source, `channel ${channelName} is missing app source`);
 
   const release = await resolveRelease(client, appReleaseConfig.source, appReleaseConfig.selector);
   const version = resolveReleaseVersion(release, appReleaseConfig.source);
-
-  return {
-    source: toSourceRef(appReleaseConfig.source),
+  const platforms = await buildPlatformEntries({
+    platformConfigs: appReleaseConfig.platforms,
+    release,
     version,
-    publishedAt: release.published_at,
-    notes: buildNotes(appReleaseConfig.notes, release.body),
-    releasePage: release.html_url,
-    platforms: await buildPlatformEntries({
-      platformConfigs: appReleaseConfig.platforms,
+    defaults,
+  });
+  let redirects = [];
+  let redirectsIncomplete = false;
+  const redirectWarnings = [];
+  try {
+    redirects = buildDownloadAliasEntries({
+      aliasConfigs: appReleaseConfig.downloadAliases,
+      appPath,
       release,
       version,
       defaults,
-    }),
+    });
+  } catch (error) {
+    if (!isReleaseIncompleteError(error)) {
+      throw error;
+    }
+    redirectsIncomplete = true;
+    redirectWarnings.push(error.message);
+  }
+
+  return {
+    entry: {
+      source: toSourceRef(appReleaseConfig.source),
+      version,
+      publishedAt: release.published_at,
+      notes: buildNotes(appReleaseConfig.notes, release.body),
+      releasePage: release.html_url,
+      platforms,
+    },
+    redirects,
+    redirectsIncomplete,
+    redirectWarnings,
   };
 }
 
@@ -190,6 +234,39 @@ function toSourceRef(sourceConfig) {
     owner: sourceConfig.owner,
     repo: sourceConfig.repo,
   };
+}
+
+function buildDownloadAliasEntries({ aliasConfigs, appPath, release, version, defaults }) {
+  if (!Array.isArray(aliasConfigs) || aliasConfigs.length === 0) {
+    return [];
+  }
+
+  return aliasConfigs.map((aliasConfig) => {
+    const route = String(aliasConfig?.route || "").trim().replace(/^\/+/, "");
+    assert(route, `release ${release.tag_name} is missing a download alias route`);
+
+    const asset = findAsset(release.assets, aliasConfig.asset, {
+      version,
+      tag: release.tag_name,
+    });
+    const sources = buildDownloadSources(
+      aliasConfig.downloadSources ?? defaults.downloadSources,
+      asset.browser_download_url,
+    );
+    const enabledSources = sources.filter((source) => source.enabled !== false);
+    const sourceName = String(aliasConfig.sourceName || "").trim();
+    const selectedSource = sourceName
+      ? enabledSources.find((source) => source.name === sourceName)
+      : enabledSources[0];
+
+    assert(selectedSource, `download alias ${route} source not found`);
+
+    return {
+      from: `/${String(appPath || "").replace(/^\/+|\/+$/g, "")}/${route}`,
+      to: selectedSource.url,
+      status: Number(aliasConfig.statusCode ?? 302),
+    };
+  });
 }
 
 function validateAppConfig(appConfig, appName) {

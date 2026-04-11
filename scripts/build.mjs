@@ -32,6 +32,7 @@ await copyDirectory(staticDir, distDir);
 const generated = [];
 for (const app of appConfigs) {
   let built;
+  const previous = previousBuilds.get(app.name);
   try {
     built = await buildAppManifest({
       appConfig: app.config,
@@ -42,7 +43,6 @@ for (const app of appConfigs) {
       runNumber,
     });
   } catch (error) {
-    const previous = previousBuilds.get(app.name);
     if (!isReleaseIncompleteError(error) || !previous) {
       throw error;
     }
@@ -51,6 +51,30 @@ for (const app of appConfigs) {
     console.warn(
       `[dreamapp-updates] reuse previous ${built.path}/manifest.json because the latest release is incomplete: ${error.message}`,
     );
+  }
+
+  if (built.redirectsIncomplete) {
+    const warningSuffix =
+      built.redirectWarnings?.length > 0 ? `: ${built.redirectWarnings.join("; ")}` : "";
+    if (previous?.redirects?.length) {
+      built = {
+        ...built,
+        redirects: previous.redirects,
+        redirectsIncomplete: false,
+      };
+      console.warn(
+        `[dreamapp-updates] reuse previous ${built.path} download redirects because the latest release aliases are incomplete${warningSuffix}`,
+      );
+    } else {
+      built = {
+        ...built,
+        redirects: [],
+        redirectsIncomplete: false,
+      };
+      console.warn(
+        `[dreamapp-updates] skip updating ${built.path} download redirects because the latest release aliases are incomplete${warningSuffix}`,
+      );
+    }
   }
 
   const manifestPath = path.join(distDir, built.path, "manifest.json");
@@ -71,6 +95,10 @@ await writeJson(path.join(distDir, "index.json"), {
     manifestUrl: item.manifestUrl,
   })),
 });
+
+const staticRedirects = await loadRedirects(path.join(distDir, "_redirects"));
+const generatedRedirects = generated.flatMap((item) => item.redirects ?? []);
+await writeRedirects(path.join(distDir, "_redirects"), [...staticRedirects, ...generatedRedirects]);
 
 console.log(`[dreamapp-updates] wrote ${generated.length} manifest(s) to ${distDir}`);
 
@@ -119,6 +147,7 @@ async function loadAppConfigs(directory, appFilter) {
 
 async function loadExistingBuilds(directory, appConfigs, publicBaseUrl) {
   const result = new Map();
+  const redirects = await loadRedirects(path.join(directory, "_redirects"));
 
   for (const app of appConfigs) {
     const manifestPath = path.join(directory, app.config.path, "manifest.json");
@@ -137,8 +166,63 @@ async function loadExistingBuilds(directory, appConfigs, publicBaseUrl) {
       path: app.config.path,
       manifest,
       manifestUrl: `${publicBaseUrl}/${app.config.path}/manifest.json`,
+      redirects: redirects.filter((entry) => entry.from.startsWith(`/${app.config.path}/`)),
     });
   }
 
   return result;
+}
+
+async function loadRedirects(filePath) {
+  try {
+    const content = await fs.readFile(filePath, "utf8");
+    return content
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter((line) => line && !line.startsWith("#"))
+      .map(parseRedirectLine);
+  } catch (error) {
+    if (error && error.code === "ENOENT") {
+      return [];
+    }
+    throw error;
+  }
+}
+
+async function writeRedirects(filePath, redirects) {
+  if (!redirects.length) {
+    return;
+  }
+
+  const deduped = new Map();
+  for (const redirect of redirects) {
+    validateRedirect(redirect);
+    const existing = deduped.get(redirect.from);
+    if (existing && (existing.to !== redirect.to || existing.status !== redirect.status)) {
+      throw new Error(`duplicate redirect with different target: ${redirect.from}`);
+    }
+    deduped.set(redirect.from, redirect);
+  }
+
+  const content = [...deduped.values()]
+    .sort((left, right) => left.from.localeCompare(right.from))
+    .map((redirect) => `${redirect.from} ${redirect.to} ${redirect.status}`)
+    .join("\n");
+
+  await fs.writeFile(filePath, `${content}\n`, "utf8");
+}
+
+function parseRedirectLine(line) {
+  const [from = "", to = "", status = "302"] = line.split(/\s+/);
+  return {
+    from,
+    to,
+    status: Number(status),
+  };
+}
+
+function validateRedirect(redirect) {
+  assert(String(redirect?.from || "").startsWith("/"), `redirect source must start with /: ${redirect?.from || ""}`);
+  assert(String(redirect?.to || "").length > 0, `redirect target is required for ${redirect?.from || ""}`);
+  assert([301, 302, 307, 308].includes(Number(redirect?.status)), `redirect status is invalid for ${redirect?.from || ""}`);
 }

@@ -5,6 +5,10 @@
 本仓库负责生成并维护静态更新清单文件，供客户端通过固定地址读取更新元数据。当前已提供：
 
 - `/dreamcreator/manifest.json`
+- `/dreamcreator/downloads/dreamcreator-macos-arm64-latest.zip`
+- `/dreamcreator/downloads/dreamcreator-macos-x64-latest.zip`
+- `/dreamcreator/downloads/dreamcreator-windows-x64-latest-installer.exe`
+- `/dreamcreator/downloads/dreamcreator-windows-x64-latest.zip`
 - `/index.json`
 - `/schema/manifest.schema.json`
 

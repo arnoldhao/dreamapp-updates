@@ -62,6 +62,36 @@ export default {
           from: "release-body",
           maxLength: 800,
         },
+        downloadAliases: [
+          {
+            route: "downloads/dreamcreator-macos-arm64-latest.zip",
+            asset: {
+              name: "dreamcreator-macos-arm64-{version}.zip",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/dreamcreator-macos-x64-latest.zip",
+            asset: {
+              name: "dreamcreator-macos-x64-{version}.zip",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/dreamcreator-windows-x64-latest-installer.exe",
+            asset: {
+              name: "dreamcreator-windows-x64-{version}-installer.exe",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/dreamcreator-windows-x64-latest.zip",
+            asset: {
+              name: "dreamcreator-windows-x64-{version}.zip",
+            },
+            sourceName: "gh-proxy",
+          },
+        ],
         platforms: {
           "darwin-arm64": {
             asset: {
