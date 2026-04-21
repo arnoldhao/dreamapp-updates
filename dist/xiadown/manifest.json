@@ -13,10 +13,83 @@
           "repo": "xiadown"
         },
         "version": "0.0.1",
-        "publishedAt": "2026-04-21T00:00:00.000Z",
-        "notes": "Placeholder manifest until the first xiadown release is published.",
-        "releasePage": "https://github.com/arnoldhao/xiadown",
-        "platforms": {}
+        "publishedAt": "2026-04-21T06:07:28.000Z",
+        "notes": "## 版本变更 / Changelog\n\n- optimize: reduce context tokens and fix connector page (#50) by @arnoldhao\n  - Optimize memory performance / 优化内存性能\n  - fix: simplify context injection / 简化上下文注入\n  - optimize system prompt / 优化系统提示词\n  - fix connector page / 修复连接页面",
+        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.8",
+        "platforms": {
+          "darwin-arm64": {
+            "artifactName": "dreamcreator-macos-arm64-2.0.8.zip",
+            "contentType": "application/zip",
+            "size": 32672936,
+            "sha256": "bcff2ab32904a465b79ac8ae0e387079aa7840ea4fba4fcefbdab361b531fd87",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-arm64-2.0.8.zip",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-arm64-2.0.8.zip",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "archive",
+            "artifactType": "zip"
+          },
+          "darwin-amd64": {
+            "artifactName": "dreamcreator-macos-x64-2.0.8.zip",
+            "contentType": "application/zip",
+            "size": 35488523,
+            "sha256": "3c5d77d35e7f273b5c7cdf42644b9bacb62641366dfbcc1e266147d66ac0f235",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-x64-2.0.8.zip",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-x64-2.0.8.zip",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "archive",
+            "artifactType": "zip"
+          },
+          "windows-amd64": {
+            "artifactName": "dreamcreator-windows-x64-2.0.8-installer.exe",
+            "contentType": "application/x-msdos-program",
+            "size": 36228109,
+            "sha256": "14d019d6d390a789deae692fdd411619626d083ef61fcb5e997f7ad9e8f598f8",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-windows-x64-2.0.8-installer.exe",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-windows-x64-2.0.8-installer.exe",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "app-installer",
+            "artifactType": "exe"
+          }
+        }
       },
       "tools": {
         "yt-dlp": {

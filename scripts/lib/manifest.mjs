@@ -123,7 +123,7 @@ async function buildAppReleaseEntry({ channelName, appReleaseConfig, appPath, de
     release = await resolveRelease(client, appReleaseConfig.source, appReleaseConfig.selector);
   } catch (error) {
     if (appReleaseConfig.fallbackRelease && isReleaseNotFoundError(error)) {
-      return buildFallbackAppReleaseEntry({ appReleaseConfig });
+      return buildFallbackAppReleaseEntry({ appReleaseConfig, defaults, client });
     }
     throw error;
   }
@@ -169,24 +169,47 @@ async function buildAppReleaseEntry({ channelName, appReleaseConfig, appPath, de
   };
 }
 
-function buildFallbackAppReleaseEntry({ appReleaseConfig }) {
+async function buildFallbackAppReleaseEntry({ appReleaseConfig, defaults, client }) {
   const fallback = appReleaseConfig.fallbackRelease;
   const version = String(fallback?.version || "").trim();
   assert(version, "fallbackRelease.version is required");
 
-  const publishedAt = parseFallbackDate(fallback.publishedAt, "fallbackRelease.publishedAt");
-  const releasePage =
+  let fallbackSourceRelease;
+  let fallbackSourceVersion;
+  if (fallback.fromRelease) {
+    assert(fallback.fromRelease.source, "fallbackRelease.fromRelease.source is required");
+    assert(fallback.fromRelease.selector, "fallbackRelease.fromRelease.selector is required");
+    fallbackSourceRelease = await resolveRelease(client, fallback.fromRelease.source, fallback.fromRelease.selector);
+    fallbackSourceVersion = resolveReleaseVersion(fallbackSourceRelease, fallback.fromRelease.source);
+  }
+
+  const publishedAt = parseFallbackDate(
+    fallback.publishedAt ?? fallbackSourceRelease?.published_at,
+    "fallbackRelease.publishedAt",
+  );
+  const releasePage = String(
     String(fallback.releasePage || "").trim() ||
-    `https://github.com/${appReleaseConfig.source.owner}/${appReleaseConfig.source.repo}`;
+      fallbackSourceRelease?.html_url ||
+      `https://github.com/${appReleaseConfig.source.owner}/${appReleaseConfig.source.repo}`,
+  ).trim();
+  const notes = buildNotes(fallback.notes, fallbackSourceRelease?.body ?? "");
+  const platforms = fallback.fromRelease
+    ? await buildPlatformEntries({
+        platformConfigs: fallback.fromRelease.platforms,
+        release: fallbackSourceRelease,
+        version: fallbackSourceVersion,
+        defaults,
+      })
+    : fallback.platforms ?? {};
 
   return {
     entry: {
       source: toSourceRef(appReleaseConfig.source),
       version,
       publishedAt,
-      notes: buildNotes(fallback.notes, ""),
+      notes,
       releasePage,
-      platforms: fallback.platforms ?? {},
+      platforms,
     },
     redirects: [],
     redirectsIncomplete: false,
