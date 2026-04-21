@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "build:dreamcreator": "node scripts/build.mjs --app dreamcreator"
+    "build:dreamcreator": "node scripts/build.mjs --app dreamcreator",
+    "build:xiadown": "node scripts/build.mjs --app xiadown"
   }
 }
-

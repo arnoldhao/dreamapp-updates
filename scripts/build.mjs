@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { copyDirectory, ensureDir, writeJson, assert } from "./lib/helpers.mjs";
-import { isReleaseIncompleteError } from "./lib/github.mjs";
+import { GitHubClient, isReleaseIncompleteError } from "./lib/github.mjs";
 import { buildAppManifest } from "./lib/manifest.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -24,6 +24,7 @@ const runNumber = String(process.env.GITHUB_RUN_NUMBER || "1");
 const appConfigs = await loadAppConfigs(appsDir, options.app);
 assert(appConfigs.length > 0, "no app configs matched the requested filter");
 const previousBuilds = await loadExistingBuilds(distDir, appConfigs, publicBaseUrl);
+const githubClient = new GitHubClient({ token: githubToken });
 
 await fs.rm(distDir, { recursive: true, force: true });
 await ensureDir(distDir);
@@ -41,6 +42,7 @@ for (const app of appConfigs) {
       githubToken,
       sourceRevision,
       runNumber,
+      client: githubClient,
     });
   } catch (error) {
     if (!isReleaseIncompleteError(error) || !previous) {

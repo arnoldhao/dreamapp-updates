@@ -78,6 +78,15 @@ export class ReleaseIncompleteError extends Error {
   }
 }
 
+export class ReleaseNotFoundError extends Error {
+  constructor(message, details = {}) {
+    super(message);
+    this.name = "ReleaseNotFoundError";
+    this.code = "ERR_RELEASE_NOT_FOUND";
+    Object.assign(this, details);
+  }
+}
+
 export function selectRelease(releases, selector) {
   assert(selector?.type, "release selector type is required");
   const usableReleases = releases.filter((release) => !release.draft);
@@ -87,7 +96,9 @@ export function selectRelease(releases, selector) {
       const wantsPrerelease = Boolean(selector.prerelease);
       const match = usableReleases.find((release) => Boolean(release.prerelease) === wantsPrerelease);
       if (!match) {
-        throw new Error(`no ${wantsPrerelease ? "prerelease" : "stable release"} found`);
+        throw new ReleaseNotFoundError(`no ${wantsPrerelease ? "prerelease" : "stable release"} found`, {
+          selector,
+        });
       }
       return match;
     }
@@ -96,7 +107,10 @@ export function selectRelease(releases, selector) {
       assert(targetTag, "tag selector requires a tag");
       const match = usableReleases.find((release) => release.tag_name === targetTag);
       if (!match) {
-        throw new Error(`release tag not found: ${targetTag}`);
+        throw new ReleaseNotFoundError(`release tag not found: ${targetTag}`, {
+          selector,
+          tag: targetTag,
+        });
       }
       return match;
     }
@@ -157,6 +171,15 @@ export function isReleaseIncompleteError(error) {
       (error.code === "ERR_RELEASE_INCOMPLETE" ||
         error.name === "ReleaseIncompleteError" ||
         isReleaseIncompleteError(error.cause)),
+  );
+}
+
+export function isReleaseNotFoundError(error) {
+  return Boolean(
+    error &&
+      (error.code === "ERR_RELEASE_NOT_FOUND" ||
+        error.name === "ReleaseNotFoundError" ||
+        isReleaseNotFoundError(error.cause)),
   );
 }
 

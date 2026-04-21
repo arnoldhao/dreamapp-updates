@@ -1,11 +1,16 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-04-21T06:16:39.195Z",
+  "updatedAt": "2026-04-21T06:23:58.138Z",
   "apps": [
     {
       "appId": "cc.dreamapp.dreamcreator",
       "path": "dreamcreator",
       "manifestUrl": "https://updates.dreamapp.cc/dreamcreator/manifest.json"
+    },
+    {
+      "appId": "cc.dreamapp.xiadown",
+      "path": "xiadown",
+      "manifestUrl": "https://updates.dreamapp.cc/xiadown/manifest.json"
     }
   ]
 }

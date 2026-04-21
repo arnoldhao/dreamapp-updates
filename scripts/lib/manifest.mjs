@@ -1,11 +1,27 @@
 import { buildDownloadSources, buildNotes, formatManifestVersion, isHexSha256, assert } from "./helpers.mjs";
-import { GitHubClient, extractSha256, findAsset, isReleaseIncompleteError, resolveReleaseVersion, selectRelease } from "./github.mjs";
+import {
+  GitHubClient,
+  extractSha256,
+  findAsset,
+  isReleaseIncompleteError,
+  isReleaseNotFoundError,
+  resolveReleaseVersion,
+  selectRelease,
+} from "./github.mjs";
 
-export async function buildAppManifest({ appConfig, appName, publicBaseUrl, githubToken, sourceRevision, runNumber }) {
+export async function buildAppManifest({
+  appConfig,
+  appName,
+  publicBaseUrl,
+  githubToken,
+  sourceRevision,
+  runNumber,
+  client,
+}) {
   validateAppConfig(appConfig, appName);
 
   const updatedAt = new Date();
-  const client = new GitHubClient({ token: githubToken });
+  const releaseClient = client ?? new GitHubClient({ token: githubToken });
   const manifest = {
     schemaVersion: 1,
     appId: appConfig.appId,
@@ -33,7 +49,7 @@ export async function buildAppManifest({ appConfig, appName, publicBaseUrl, gith
         channelName,
         channelConfig,
         appConfig,
-        client,
+        client: releaseClient,
       });
       if (entry) {
         manifest.channels[channelName] = entry;
@@ -102,7 +118,16 @@ async function buildChannelEntry({ channelName, channelConfig, appConfig, client
 async function buildAppReleaseEntry({ channelName, appReleaseConfig, appPath, defaults, client }) {
   assert(appReleaseConfig?.source, `channel ${channelName} is missing app source`);
 
-  const release = await resolveRelease(client, appReleaseConfig.source, appReleaseConfig.selector);
+  let release;
+  try {
+    release = await resolveRelease(client, appReleaseConfig.source, appReleaseConfig.selector);
+  } catch (error) {
+    if (appReleaseConfig.fallbackRelease && isReleaseNotFoundError(error)) {
+      return buildFallbackAppReleaseEntry({ appReleaseConfig });
+    }
+    throw error;
+  }
+
   const version = resolveReleaseVersion(release, appReleaseConfig.source);
   const platforms = await buildPlatformEntries({
     platformConfigs: appReleaseConfig.platforms,
@@ -142,6 +167,38 @@ async function buildAppReleaseEntry({ channelName, appReleaseConfig, appPath, de
     redirectsIncomplete,
     redirectWarnings,
   };
+}
+
+function buildFallbackAppReleaseEntry({ appReleaseConfig }) {
+  const fallback = appReleaseConfig.fallbackRelease;
+  const version = String(fallback?.version || "").trim();
+  assert(version, "fallbackRelease.version is required");
+
+  const publishedAt = parseFallbackDate(fallback.publishedAt, "fallbackRelease.publishedAt");
+  const releasePage =
+    String(fallback.releasePage || "").trim() ||
+    `https://github.com/${appReleaseConfig.source.owner}/${appReleaseConfig.source.repo}`;
+
+  return {
+    entry: {
+      source: toSourceRef(appReleaseConfig.source),
+      version,
+      publishedAt,
+      notes: buildNotes(fallback.notes, ""),
+      releasePage,
+      platforms: fallback.platforms ?? {},
+    },
+    redirects: [],
+    redirectsIncomplete: false,
+    redirectWarnings: [],
+  };
+}
+
+function parseFallbackDate(value, label) {
+  const rawValue = String(value || "1970-01-01T00:00:00.000Z");
+  const parsed = new Date(rawValue);
+  assert(!Number.isNaN(parsed.getTime()), `${label} is invalid`);
+  return parsed.toISOString();
 }
 
 async function buildToolReleaseEntry({ toolName, toolConfig, defaults, client }) {
@@ -283,7 +340,7 @@ function validateManifest(manifest) {
 
   for (const [channelName, channel] of Object.entries(manifest.channels)) {
     assert(channel.app, `channel ${channelName} is missing app section`);
-    validatePlatforms(channel.app.platforms, `${channelName}.app`);
+    validatePlatforms(channel.app.platforms, `${channelName}.app`, { required: false });
 
     for (const [toolName, tool] of Object.entries(channel.tools)) {
       assert(tool.kind === "external-tool", `tool ${channelName}/${toolName} has invalid kind`);
@@ -292,8 +349,12 @@ function validateManifest(manifest) {
   }
 }
 
-function validatePlatforms(platforms, label) {
-  assert(platforms && Object.keys(platforms).length > 0, `${label} has no platforms`);
+function validatePlatforms(platforms, label, { required = true } = {}) {
+  assert(platforms && typeof platforms === "object", `${label} platforms are required`);
+  if (required) {
+    assert(Object.keys(platforms).length > 0, `${label} has no platforms`);
+  }
+
   for (const [platformKey, platform] of Object.entries(platforms)) {
     assert(platform.artifactName, `${label}.${platformKey} artifactName is required`);
     assert(platform.sources?.length > 0, `${label}.${platformKey} sources are required`);

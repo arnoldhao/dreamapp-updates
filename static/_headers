@@ -12,10 +12,16 @@
   Content-Type: application/json; charset=utf-8
   X-Content-Type-Options: nosniff
 
+/xiadown/manifest.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Cache-Control: public, max-age=300, stale-while-revalidate=600
+  Content-Type: application/json; charset=utf-8
+  X-Content-Type-Options: nosniff
+
 /schema/*
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
   Cache-Control: public, max-age=86400
   Content-Type: application/json; charset=utf-8
   X-Content-Type-Options: nosniff
-

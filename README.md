@@ -9,6 +9,7 @@
 - `/dreamcreator/downloads/dreamcreator-macos-x64-latest.zip`
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest-installer.exe`
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest.zip`
+- `/xiadown/manifest.json`
 - `/index.json`
 - `/schema/manifest.schema.json`
 

@@ -242,7 +242,6 @@
         },
         "platforms": {
           "type": "object",
-          "minProperties": 1,
           "additionalProperties": {
             "$ref": "#/$defs/platformArtifact"
           }
