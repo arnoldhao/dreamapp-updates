@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.dreamcreator",
-  "manifestVersion": "2026.04.21.532",
+  "manifestVersion": "2026.04.21.533",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-21T05:32:38.749Z",
+  "updatedAt": "2026-04-21T06:16:34.110Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "dreamcreator"
         },
-        "version": "2.0.7",
-        "publishedAt": "2026-04-19T09:14:25Z",
-        "notes": "## 版本变更 / Changelog\n\n- optimize: use CDP instead Playwright / optimize tools page and update logic (#49) by @arnoldhao\n  - optimize context tab / 优化上下文面板\n  - replaced playwright by cdp / 使用CDP替代Playwright\n  - fix tool call approval / 修复调用工具审批\n  - optimize browser use / 优化浏览器调用\n  - optimize tools page / 优化工具页面\n  - optimize app update / 优化软件升级\n  - fix profile name / 修复Profile名称\n- optimize: one-shot call and update Windows icons (#48) by @arnoldhao\n  - add call records tab in debug page / 调试页面增加调用记录面板\n  - construct context tab in debug page / 调试页面重构上下文面板\n  - add call records saving strategy / 增加调用记录保存策略\n  - optimized one-shot call / 优化单次调用\n  - fix call twice after title generation failed / 修复生成标题失败后会调用2次的问题\n  - update Windows icons / 更新Windows图标\n  - improve test stability / 提示测试用例稳定性\n- chore…",
-        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.7",
+        "version": "2.0.8",
+        "publishedAt": "2026-04-21T06:07:28Z",
+        "notes": "## 版本变更 / Changelog\n\n- optimize: reduce context tokens and fix connector page (#50) by @arnoldhao\n  - Optimize memory performance / 优化内存性能\n  - fix: simplify context injection / 简化上下文注入\n  - optimize system prompt / 优化系统提示词\n  - fix connector page / 修复连接页面",
+        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.8",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "dreamcreator-macos-arm64-2.0.7.zip",
+            "artifactName": "dreamcreator-macos-arm64-2.0.8.zip",
             "contentType": "application/zip",
-            "size": 32668015,
-            "sha256": "012e1c4f37a0778f6382e333c398eeb5c53fb664e78870ae70efdd2d40e0f9d8",
+            "size": 32672936,
+            "sha256": "bcff2ab32904a465b79ac8ae0e387079aa7840ea4fba4fcefbdab361b531fd87",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.7/dreamcreator-macos-arm64-2.0.7.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-arm64-2.0.8.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.7/dreamcreator-macos-arm64-2.0.7.zip",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-arm64-2.0.8.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "dreamcreator-macos-x64-2.0.7.zip",
+            "artifactName": "dreamcreator-macos-x64-2.0.8.zip",
             "contentType": "application/zip",
-            "size": 35481496,
-            "sha256": "08eaddb1b6d09a98e6ab853a3f675233bb54a26595a4cf44e6cfde331d4f4231",
+            "size": 35488523,
+            "sha256": "3c5d77d35e7f273b5c7cdf42644b9bacb62641366dfbcc1e266147d66ac0f235",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.7/dreamcreator-macos-x64-2.0.7.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-x64-2.0.8.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.7/dreamcreator-macos-x64-2.0.7.zip",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-x64-2.0.8.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "dreamcreator-windows-x64-2.0.7-installer.exe",
+            "artifactName": "dreamcreator-windows-x64-2.0.8-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 36210955,
-            "sha256": "8fbf601fe4b65e52111277cd75f45923265b904d96628e1ed4f90f8770cd0f7e",
+            "size": 36228109,
+            "sha256": "14d019d6d390a789deae692fdd411619626d083ef61fcb5e997f7ad9e8f598f8",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.7/dreamcreator-windows-x64-2.0.7-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-windows-x64-2.0.8-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.7/dreamcreator-windows-x64-2.0.7-installer.exe",
+                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-windows-x64-2.0.8-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -401,5 +401,5 @@
       }
     }
   },
-  "sourceRevision": "3e2d7fa2b32e5dcd84c3fd6f029ab1ba0828ccfb"
+  "sourceRevision": "660abf3ff40474b77c14beef31101e7bf5a75b35"
 }
