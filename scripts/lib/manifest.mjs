@@ -104,11 +104,17 @@ async function buildChannelEntry({ channelName, channelConfig, appConfig, client
     });
   }
 
+  const entry = {
+    app: appEntry,
+    tools,
+  };
+
+  if (channelConfig.dreamFm) {
+    entry.dreamFm = channelConfig.dreamFm;
+  }
+
   return {
-    entry: {
-      app: appEntry,
-      tools,
-    },
+    entry,
     redirects,
     redirectsIncomplete,
     redirectWarnings,

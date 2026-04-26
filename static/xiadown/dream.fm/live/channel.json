@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "id": "dreamfm.live.channel",
+  "version": "2026.04.26.1",
+  "updatedAt": "2026-04-26T00:00:00.000Z",
+  "ttlSeconds": 21600,
+  "groups": [
+    {
+      "id": "focus",
+      "title": "Focus",
+      "items": [
+        {
+          "id": "live-lofi-girl-study",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "jfKfPfyJRdk",
+          "title": "lofi hip hop radio",
+          "channel": "Lofi Girl",
+          "description": "beats to relax/study to",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "jfKfPfyJRdk"
+          }
+        },
+        {
+          "id": "live-chillhop",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "7NOSDKb0HlU",
+          "title": "chillhop radio",
+          "channel": "Chillhop Music",
+          "description": "beats to study/relax to",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.googleusercontent.com/5sz00tGeNdll17IqVECF7s7shUzz0nlirAK86WgY0yz7-4t2S51_XMvjM7HaJfdwNlM6rm_Hrg=s900-c-k-c0x00ffffff-no-rj",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "7NOSDKb0HlU"
+          }
+        },
+        {
+          "id": "live-college-music",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "gmv54pfxk0Q",
+          "title": "chilled beats radio",
+          "channel": "College Music",
+          "description": "lofi, electronic and indie",
+          "durationLabel": "LIVE",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "gmv54pfxk0Q"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sleep",
+      "title": "Sleep",
+      "items": [
+        {
+          "id": "live-lofi-girl-sleep",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "28KRPhVzCus",
+          "title": "lofi hip hop radio",
+          "channel": "Lofi Girl",
+          "description": "beats to sleep/chill to",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "28KRPhVzCus"
+          }
+        },
+        {
+          "id": "live-steezy-lofi",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "rPjez8z61rI",
+          "title": "lofi hip hop radio",
+          "channel": "STEEZYASFUCK",
+          "description": "beats to sleep/study/relax to",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.googleusercontent.com/ytc/AIdro_nZ5FXFD0IllXx0N7DtImU0BGWBPGPdsGza28L12j9J2cA=s900-c-k-c0x00ffffff-no-rj",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "rPjez8z61rI"
+          }
+        },
+        {
+          "id": "live-lofi-fruits",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "BLoTEt7DPvo",
+          "title": "lofi hip hop radio",
+          "channel": "Lofi Fruits Music",
+          "description": "beats to relax/study/sleep",
+          "durationLabel": "LIVE",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "BLoTEt7DPvo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jazz-coffee",
+      "title": "Jazz & Coffee",
+      "items": [
+        {
+          "id": "live-lofi-girl-jazz",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "HuFYqnbVbzY",
+          "title": "jazz lofi radio",
+          "channel": "Lofi Girl",
+          "description": "beats to chill/study to",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "HuFYqnbVbzY"
+          }
+        },
+        {
+          "id": "live-steezy-coffee",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "e3L1PIY1pN8",
+          "title": "coffee shop radio",
+          "channel": "STEEZYASFUCK",
+          "description": "lofi and jazzy hip-hop beats",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.googleusercontent.com/ytc/AIdro_nZ5FXFD0IllXx0N7DtImU0BGWBPGPdsGza28L12j9J2cA=s900-c-k-c0x00ffffff-no-rj",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "e3L1PIY1pN8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "night",
+      "title": "Night & Game",
+      "items": [
+        {
+          "id": "live-lofi-girl-synthwave",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "4xDzrJKXOOY",
+          "title": "synthwave radio",
+          "channel": "Lofi Girl",
+          "description": "beats to chill/game to",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "4xDzrJKXOOY"
+          }
+        },
+        {
+          "id": "live-afro-lofi",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "KMXZF-K2mus",
+          "title": "afro lofi radio",
+          "channel": "Afro Lofi",
+          "description": "beats to study, relax and code to",
+          "durationLabel": "LIVE",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "KMXZF-K2mus"
+          }
+        }
+      ]
+    }
+  ]
+}
