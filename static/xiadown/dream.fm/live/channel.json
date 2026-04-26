@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "id": "dreamfm.live.channel",
-  "version": "2026.04.26.2",
-  "updatedAt": "2026-04-26T00:00:00.000Z",
-  "ttlSeconds": 21600,
+  "version": "2026.04.26.3",
+  "updatedAt": "2026-04-26T08:12:04.000Z",
+  "ttlSeconds": 300,
   "groups": [
     {
       "id": "focus",

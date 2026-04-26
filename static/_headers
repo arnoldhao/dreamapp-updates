@@ -19,10 +19,17 @@
   Content-Type: application/json; charset=utf-8
   X-Content-Type-Options: nosniff
 
-/xiadown/dream.fm/*
+/xiadown/dream.fm/live/channel.json
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
-  Cache-Control: public, max-age=21600, stale-while-revalidate=86400
+  Cache-Control: public, max-age=300, stale-while-revalidate=600
+  Content-Type: application/json; charset=utf-8
+  X-Content-Type-Options: nosniff
+
+/xiadown/dream.fm/live/*/channel.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+  Cache-Control: public, max-age=31536000, immutable
   Content-Type: application/json; charset=utf-8
   X-Content-Type-Options: nosniff
 
