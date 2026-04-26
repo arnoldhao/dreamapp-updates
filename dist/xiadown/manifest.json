@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.04.26.697",
+  "manifestVersion": "2026.04.26.1",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-26T03:18:07.799Z",
+  "updatedAt": "2026-04-26T04:10:03.915Z",
   "channels": {
     "stable": {
       "app": {
@@ -398,8 +398,18 @@
             }
           }
         }
+      },
+      "dreamFm": {
+        "liveChannel": {
+          "schemaVersion": 1,
+          "url": "https://updates.dreamapp.cc/xiadown/dream.fm/live/channel.json",
+          "version": "2026.04.26.1",
+          "updatedAt": "2026-04-26T00:00:00.000Z",
+          "minAppVersion": "0.0.1",
+          "ttlSeconds": 21600,
+          "fallback": "embedded"
+        }
       }
     }
-  },
-  "sourceRevision": "865beb6eaaf35ac38bff46a80ae434c4478a53b5"
+  }
 }

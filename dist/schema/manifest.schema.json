@@ -61,6 +61,58 @@
           "additionalProperties": {
             "$ref": "#/$defs/toolRelease"
           }
+        },
+        "dreamFm": {
+          "$ref": "#/$defs/dreamFm"
+        }
+      }
+    },
+    "dreamFm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "liveChannel": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "schemaVersion",
+            "url",
+            "version",
+            "updatedAt",
+            "ttlSeconds"
+          ],
+          "properties": {
+            "schemaVersion": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "updatedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "minAppVersion": {
+              "type": "string"
+            },
+            "ttlSeconds": {
+              "type": "integer",
+              "minimum": 60
+            },
+            "fallback": {
+              "type": "string",
+              "enum": [
+                "embedded",
+                "none"
+              ]
+            }
+          }
         }
       }
     },
