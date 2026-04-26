@@ -102,9 +102,9 @@ export default {
       dreamFm: {
         liveChannel: {
           schemaVersion: 1,
-          url: "https://updates.dreamapp.cc/xiadown/dream.fm/live/2026.04.26.3/channel.json",
-          version: "2026.04.26.3",
-          updatedAt: "2026-04-26T08:12:04.000Z",
+          url: "https://updates.dreamapp.cc/xiadown/dream.fm/live/2026.04.26.5/channel.json",
+          version: "2026.04.26.5",
+          updatedAt: "2026-04-26T08:46:32.000Z",
           minAppVersion: "0.0.1",
           ttlSeconds: 300,
           fallback: "embedded",

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "dreamfm.live.channel",
-  "version": "2026.04.26.3",
-  "updatedAt": "2026-04-26T08:12:04.000Z",
+  "version": "2026.04.26.5",
+  "updatedAt": "2026-04-26T08:46:32.000Z",
   "ttlSeconds": 300,
   "groups": [
     {
@@ -16,7 +16,7 @@
           "videoId": "jfKfPfyJRdk",
           "title": "lofi hip hop radio",
           "channel": "Lofi Girl",
-          "description": "beats to relax/study to",
+          "description": "lofi hip hop radio 📚 beats to relax/study to",
           "durationLabel": "LIVE",
           "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
           "playback": {
@@ -31,7 +31,7 @@
           "videoId": "7NOSDKb0HlU",
           "title": "chillhop radio",
           "channel": "Chillhop Music",
-          "description": "beats to study/relax to",
+          "description": "lofi hip hop radio - beats to study/relax to 🐾",
           "durationLabel": "LIVE",
           "thumbnailUrl": "https://yt3.googleusercontent.com/5sz00tGeNdll17IqVECF7s7shUzz0nlirAK86WgY0yz7-4t2S51_XMvjM7HaJfdwNlM6rm_Hrg=s900-c-k-c0x00ffffff-no-rj",
           "playback": {
@@ -40,42 +40,13 @@
           }
         },
         {
-          "id": "live-lofi-girl-piano-focus",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "TtkFsfOP9QI",
-          "title": "peaceful piano radio",
-          "channel": "Lofi Girl",
-          "description": "music to focus/study to",
-          "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "TtkFsfOP9QI"
-          }
-        },
-        {
-          "id": "live-bootleg-boy-chill-focus",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "0jKe6lv_I1A",
-          "title": "chill radio 24/7",
-          "channel": "the bootleg boy 2",
-          "description": "lofi hip hop beats for chilling and studying",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "0jKe6lv_I1A"
-          }
-        },
-        {
           "id": "live-focus-qowpfaqum0",
           "group": "live",
           "source": "youtube_music",
           "videoId": "_QoWpFAQuM0",
           "title": "focus lofi radio",
-          "channel": "YouTube",
-          "description": "focus stream",
+          "channel": "느린달팽이",
+          "description": "✍️ 작업할 때 듣는 메이플 커버 24/7 | Study MapleStory Lofi BGM covers",
           "durationLabel": "LIVE",
           "playback": {
             "kind": "youtube_music",
@@ -88,8 +59,8 @@
           "source": "youtube_music",
           "videoId": "edn7FurOFxM",
           "title": "summer lofi chill",
-          "channel": "DreamDrift LoFi",
-          "description": "ocean coffee for relaxing morning",
+          "channel": "Little Lofi Cute",
+          "description": "Summer Lofi Chill ☀️ Ocean Coffee for Relaxing Morning 🌊 Lofi Hip Hop / Beats to relax/chill/study",
           "durationLabel": "LIVE",
           "playback": {
             "kind": "youtube_music",
@@ -109,7 +80,7 @@
           "videoId": "28KRPhVzCus",
           "title": "lofi hip hop radio",
           "channel": "Lofi Girl",
-          "description": "beats to sleep/chill to",
+          "description": "lofi hip hop radio 💤 beats to sleep/chill to",
           "durationLabel": "LIVE",
           "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
           "playback": {
@@ -124,69 +95,12 @@
           "videoId": "rPjez8z61rI",
           "title": "lofi hip hop radio",
           "channel": "STEEZYASFUCK",
-          "description": "beats to sleep/study/relax to",
+          "description": "lofi hip hop radio – beats to sleep/study/relax to ☕",
           "durationLabel": "LIVE",
           "thumbnailUrl": "https://yt3.googleusercontent.com/ytc/AIdro_nZ5FXFD0IllXx0N7DtImU0BGWBPGPdsGza28L12j9J2cA=s900-c-k-c0x00ffffff-no-rj",
           "playback": {
             "kind": "youtube_music",
             "videoId": "rPjez8z61rI"
-          }
-        },
-        {
-          "id": "live-bootleg-boy-sleep",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "bLlloaA4b4g",
-          "title": "lofi hip hop radio",
-          "channel": "the bootleg boy",
-          "description": "sad and sleepy beats",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "bLlloaA4b4g"
-          }
-        },
-        {
-          "id": "live-lofi-girl-piano-sleep",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "TtkFsfOP9QI",
-          "title": "peaceful piano radio",
-          "channel": "Lofi Girl",
-          "description": "calm music to focus/study to",
-          "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "TtkFsfOP9QI"
-          }
-        },
-        {
-          "id": "live-abao-jazz-lofi-sleep",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "kgx4WGK0oNU",
-          "title": "jazz/lofi hip hop radio",
-          "channel": "Abao in Tokyo",
-          "description": "chill beats to relax/study to",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "kgx4WGK0oNU"
-          }
-        },
-        {
-          "id": "live-bootleg-boy-chill-sleep",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "0jKe6lv_I1A",
-          "title": "chill radio 24/7",
-          "channel": "the bootleg boy 2",
-          "description": "lofi hip hop beats for chilling and studying",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "0jKe6lv_I1A"
           }
         }
       ]
@@ -202,7 +116,7 @@
           "videoId": "HuFYqnbVbzY",
           "title": "jazz lofi radio",
           "channel": "Lofi Girl",
-          "description": "beats to chill/study to",
+          "description": "jazz lofi radio 🎷 beats to chill/study to",
           "durationLabel": "LIVE",
           "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
           "playback": {
@@ -216,8 +130,8 @@
           "source": "youtube_music",
           "videoId": "SuwhjByNK3s",
           "title": "jazz coffee radio",
-          "channel": "YouTube",
-          "description": "jazz coffee stream",
+          "channel": "Cantopop Lofi",
+          "description": "🎧🛑LIVE 24／7 ｜☕  80後90後  廣東歌 Lo-Fi 直播放送｜ 🌆  Live Radio",
           "durationLabel": "LIVE",
           "playback": {
             "kind": "youtube_music",
@@ -230,55 +144,12 @@
           "source": "youtube_music",
           "videoId": "jJWbtgPMQmc",
           "title": "coffee jazz radio",
-          "channel": "YouTube",
-          "description": "jazz coffee stream",
+          "channel": "Traven Luc",
+          "description": "🔴 LIVE - Relaxing Lofi Playlist with Traditional Chinese Instrument [NO AD]",
           "durationLabel": "LIVE",
           "playback": {
             "kind": "youtube_music",
             "videoId": "jJWbtgPMQmc"
-          }
-        },
-        {
-          "id": "live-abao-jazz-lofi",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "kgx4WGK0oNU",
-          "title": "jazz/lofi hip hop radio",
-          "channel": "Abao in Tokyo",
-          "description": "chill beats to relax/study to",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "kgx4WGK0oNU"
-          }
-        },
-        {
-          "id": "live-chillhop-jazz-coffee",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "7NOSDKb0HlU",
-          "title": "chillhop radio",
-          "channel": "Chillhop Music",
-          "description": "jazzy and lofi hip hop beats",
-          "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/5sz00tGeNdll17IqVECF7s7shUzz0nlirAK86WgY0yz7-4t2S51_XMvjM7HaJfdwNlM6rm_Hrg=s900-c-k-c0x00ffffff-no-rj",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "7NOSDKb0HlU"
-          }
-        },
-        {
-          "id": "live-dreamdrift-ocean-coffee",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "edn7FurOFxM",
-          "title": "summer lofi chill",
-          "channel": "DreamDrift LoFi",
-          "description": "ocean coffee for relaxing morning",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "edn7FurOFxM"
           }
         }
       ]
@@ -294,83 +165,12 @@
           "videoId": "4xDzrJKXOOY",
           "title": "synthwave radio",
           "channel": "Lofi Girl",
-          "description": "beats to chill/game to",
+          "description": "synthwave radio 🌌 beats to chill/game to",
           "durationLabel": "LIVE",
           "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
           "playback": {
             "kind": "youtube_music",
             "videoId": "4xDzrJKXOOY"
-          }
-        },
-        {
-          "id": "live-mwubs-synthwave",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "gDahRlfixRc",
-          "title": "synthwave radio",
-          "channel": "mwubs music",
-          "description": "music for streaming, gaming and studying",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "gDahRlfixRc"
-          }
-        },
-        {
-          "id": "live-temple-dark-ambient",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "ypyj73Tifk0",
-          "title": "dark ambient radio",
-          "channel": "Temple Of Serenity",
-          "description": "24/7 live music broadcast",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "ypyj73Tifk0"
-          }
-        },
-        {
-          "id": "live-bootleg-boy-chill-night",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "0jKe6lv_I1A",
-          "title": "chill radio 24/7",
-          "channel": "the bootleg boy 2",
-          "description": "lofi hip hop beats for chilling and studying",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "0jKe6lv_I1A"
-          }
-        },
-        {
-          "id": "live-bootleg-boy-sleep-night",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "bLlloaA4b4g",
-          "title": "lofi hip hop radio",
-          "channel": "the bootleg boy",
-          "description": "sad and sleepy beats",
-          "durationLabel": "LIVE",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "bLlloaA4b4g"
-          }
-        },
-        {
-          "id": "live-lofi-girl-piano-night",
-          "group": "live",
-          "source": "youtube_music",
-          "videoId": "TtkFsfOP9QI",
-          "title": "peaceful piano radio",
-          "channel": "Lofi Girl",
-          "description": "music to focus/study to",
-          "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
-          "playback": {
-            "kind": "youtube_music",
-            "videoId": "TtkFsfOP9QI"
           }
         }
       ]
