@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "dreamfm.live.channel",
-  "version": "2026.04.26.5",
-  "updatedAt": "2026-04-26T08:46:32.000Z",
+  "version": "2026.04.28.1",
+  "updatedAt": "2026-04-28T11:32:39.000Z",
   "ttlSeconds": 300,
   "groups": [
     {
@@ -14,11 +14,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "jfKfPfyJRdk",
-          "title": "lofi hip hop radio",
+          "title": "lofi hip hop radio 📚",
           "channel": "Lofi Girl",
           "description": "lofi hip hop radio 📚 beats to relax/study to",
           "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "thumbnailUrl": "https://yt3.ggpht.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg",
           "playback": {
             "kind": "youtube_music",
             "videoId": "jfKfPfyJRdk"
@@ -29,11 +29,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "7NOSDKb0HlU",
-          "title": "chillhop radio",
+          "title": "lofi hip hop radio 🐾",
           "channel": "Chillhop Music",
           "description": "lofi hip hop radio - beats to study/relax to 🐾",
           "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/5sz00tGeNdll17IqVECF7s7shUzz0nlirAK86WgY0yz7-4t2S51_XMvjM7HaJfdwNlM6rm_Hrg=s900-c-k-c0x00ffffff-no-rj",
+          "thumbnailUrl": "https://yt3.ggpht.com/5sz00tGeNdll17IqVECF7s7shUzz0nlirAK86WgY0yz7-4t2S51_XMvjM7HaJfdwNlM6rm_Hrg",
           "playback": {
             "kind": "youtube_music",
             "videoId": "7NOSDKb0HlU"
@@ -44,10 +44,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "_QoWpFAQuM0",
-          "title": "focus lofi radio",
+          "title": "MapleStory Lofi ✍️",
           "channel": "느린달팽이",
           "description": "✍️ 작업할 때 듣는 메이플 커버 24/7 | Study MapleStory Lofi BGM covers",
           "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.ggpht.com/LsBkN4e7W0JWeuQ2bpBAh54bt-ssnqnGZAGeBH1RYV-V0mI9cKFXt6h5_LuxexdLfDiYgrC0-A",
           "playback": {
             "kind": "youtube_music",
             "videoId": "_QoWpFAQuM0"
@@ -58,10 +59,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "edn7FurOFxM",
-          "title": "summer lofi chill",
+          "title": "Summer Lofi Chill ☀️",
           "channel": "Little Lofi Cute",
           "description": "Summer Lofi Chill ☀️ Ocean Coffee for Relaxing Morning 🌊 Lofi Hip Hop / Beats to relax/chill/study",
           "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.ggpht.com/XY5I62ZTW4KGHIKYSX3dzfW6WZ1f0khRSAmHGQ-tOL2Q8oqkuJXJuLLEQzXPfsrRj9PTtiGx",
           "playback": {
             "kind": "youtube_music",
             "videoId": "edn7FurOFxM"
@@ -78,11 +80,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "28KRPhVzCus",
-          "title": "lofi hip hop radio",
+          "title": "lofi hip hop radio 💤",
           "channel": "Lofi Girl",
           "description": "lofi hip hop radio 💤 beats to sleep/chill to",
           "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "thumbnailUrl": "https://yt3.ggpht.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg",
           "playback": {
             "kind": "youtube_music",
             "videoId": "28KRPhVzCus"
@@ -93,11 +95,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "rPjez8z61rI",
-          "title": "lofi hip hop radio",
+          "title": "lofi hip hop radio ☕",
           "channel": "STEEZYASFUCK",
           "description": "lofi hip hop radio – beats to sleep/study/relax to ☕",
           "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/ytc/AIdro_nZ5FXFD0IllXx0N7DtImU0BGWBPGPdsGza28L12j9J2cA=s900-c-k-c0x00ffffff-no-rj",
+          "thumbnailUrl": "https://yt3.ggpht.com/ytc/AIdro_nZ5FXFD0IllXx0N7DtImU0BGWBPGPdsGza28L12j9J2cA",
           "playback": {
             "kind": "youtube_music",
             "videoId": "rPjez8z61rI"
@@ -114,11 +116,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "HuFYqnbVbzY",
-          "title": "jazz lofi radio",
+          "title": "jazz lofi radio 🎷",
           "channel": "Lofi Girl",
           "description": "jazz lofi radio 🎷 beats to chill/study to",
           "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "thumbnailUrl": "https://yt3.ggpht.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg",
           "playback": {
             "kind": "youtube_music",
             "videoId": "HuFYqnbVbzY"
@@ -129,10 +131,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "SuwhjByNK3s",
-          "title": "jazz coffee radio",
+          "title": "80後90後  廣東歌 Lo-Fi 🌆",
           "channel": "Cantopop Lofi",
-          "description": "🎧🛑LIVE 24／7 ｜☕  80後90後  廣東歌 Lo-Fi 直播放送｜ 🌆  Live Radio",
+          "description": "🎧🛑LIVE 24／7 ｜☕ 80後90後 廣東歌 Lo-Fi 直播放送｜ 🌆 Live Radio",
           "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.ggpht.com/X8bp1YfWjEexd81S-CEdkW-UnQ71znZVKaAXEWUnyLi-MJdyokxz0uLF3_H0evcnCEdJevDM",
           "playback": {
             "kind": "youtube_music",
             "videoId": "SuwhjByNK3s"
@@ -143,10 +146,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "jJWbtgPMQmc",
-          "title": "coffee jazz radio",
+          "title": "Traditional Chinese Instrument 🀄",
           "channel": "Traven Luc",
           "description": "🔴 LIVE - Relaxing Lofi Playlist with Traditional Chinese Instrument [NO AD]",
           "durationLabel": "LIVE",
+          "thumbnailUrl": "https://yt3.ggpht.com/XjRzyPM4_U9YRI5-s8BI2kyeEERpfP0ph1aXOmbMKikJKu__0K1tGnyTVvhQeoo7XYqnQ7-pHQ",
           "playback": {
             "kind": "youtube_music",
             "videoId": "jJWbtgPMQmc"
@@ -163,11 +167,11 @@
           "group": "live",
           "source": "youtube_music",
           "videoId": "4xDzrJKXOOY",
-          "title": "synthwave radio",
+          "title": "synthwave radio 🌌",
           "channel": "Lofi Girl",
           "description": "synthwave radio 🌌 beats to chill/game to",
           "durationLabel": "LIVE",
-          "thumbnailUrl": "https://yt3.googleusercontent.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg=s900-c-k-c0x00ffffff-no-rj",
+          "thumbnailUrl": "https://yt3.ggpht.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg",
           "playback": {
             "kind": "youtube_music",
             "videoId": "4xDzrJKXOOY"
