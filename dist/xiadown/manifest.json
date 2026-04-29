@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.04.29.793",
+  "manifestVersion": "2026.04.29.795",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-29T09:23:01.497Z",
+  "updatedAt": "2026-04-29T10:27:32.651Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.0.1",
-        "publishedAt": "2026-04-21T06:07:28.000Z",
-        "notes": "## 版本变更 / Changelog\n\n- optimize: reduce context tokens and fix connector page (#50) by @arnoldhao\n  - Optimize memory performance / 优化内存性能\n  - fix: simplify context injection / 简化上下文注入\n  - optimize system prompt / 优化系统提示词\n  - fix connector page / 修复连接页面",
-        "releasePage": "https://github.com/arnoldhao/dreamcreator/releases/tag/v2.0.8",
+        "version": "0.1.0",
+        "publishedAt": "2026-04-29T10:13:32Z",
+        "notes": "## 版本变更 / Changelog\n\n- fix: Welcome to XiaDown (#1) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.1.0",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "dreamcreator-macos-arm64-2.0.8.zip",
+            "artifactName": "xiadown-macos-arm64-0.1.0.zip",
             "contentType": "application/zip",
-            "size": 32672936,
-            "sha256": "bcff2ab32904a465b79ac8ae0e387079aa7840ea4fba4fcefbdab361b531fd87",
+            "size": 16883124,
+            "sha256": "93f01316d05bde0308af57348f0dfc65f042af691693a6e4f7a3022ab80415b2",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-arm64-2.0.8.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-arm64-0.1.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-arm64-2.0.8.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-arm64-0.1.0.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "dreamcreator-macos-x64-2.0.8.zip",
+            "artifactName": "xiadown-macos-x64-0.1.0.zip",
             "contentType": "application/zip",
-            "size": 35488523,
-            "sha256": "3c5d77d35e7f273b5c7cdf42644b9bacb62641366dfbcc1e266147d66ac0f235",
+            "size": 17896780,
+            "sha256": "b640fa94cec267f86be7bb1aa7d5c64f104283976bc33ff430d1faba97026113",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-x64-2.0.8.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-x64-0.1.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-macos-x64-2.0.8.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-x64-0.1.0.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "dreamcreator-windows-x64-2.0.8-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.1.0-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 36228109,
-            "sha256": "14d019d6d390a789deae692fdd411619626d083ef61fcb5e997f7ad9e8f598f8",
+            "size": 19692616,
+            "sha256": "2b21e2616940102b1e8201141c450fc090d457251bd95079660f9cdeb88b61a7",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-windows-x64-2.0.8-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-windows-x64-0.1.0-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/dreamcreator/releases/download/v2.0.8/dreamcreator-windows-x64-2.0.8-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-windows-x64-0.1.0-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "5e7e2bf1baa5f54fb7c93cec4a5c819adc3ed7a1"
+  "sourceRevision": "1d56e0b1cb28ea48fca5238d3f6f920f0b84ac5c"
 }

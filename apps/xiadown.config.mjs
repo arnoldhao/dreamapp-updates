@@ -1,7 +1,5 @@
 import dreamcreatorConfig from "./dreamcreator.config.mjs";
 
-const dreamcreatorStableApp = dreamcreatorConfig.channels.stable.app;
-
 const xiadownSource = {
   provider: "github-release",
   owner: "arnoldhao",
@@ -21,18 +19,6 @@ export default {
         selector: {
           type: "latest",
           prerelease: false,
-        },
-        fallbackRelease: {
-          version: "0.0.1",
-          notes: {
-            from: "release-body",
-            maxLength: 800,
-          },
-          fromRelease: {
-            source: dreamcreatorStableApp.source,
-            selector: dreamcreatorStableApp.selector,
-            platforms: dreamcreatorStableApp.platforms,
-          },
         },
         notes: {
           from: "release-body",

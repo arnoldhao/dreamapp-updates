@@ -10,6 +10,10 @@
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest-installer.exe`
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest.zip`
 - `/xiadown/manifest.json`
+- `/xiadown/downloads/xiadown-macos-arm64-latest.zip`
+- `/xiadown/downloads/xiadown-macos-x64-latest.zip`
+- `/xiadown/downloads/xiadown-windows-x64-latest-installer.exe`
+- `/xiadown/downloads/xiadown-windows-x64-latest.zip`
 - `/index.json`
 - `/schema/manifest.schema.json`
 
