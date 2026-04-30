@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.04.30.821",
+  "manifestVersion": "2026.04.30.822",
   "defaultChannel": "stable",
-  "updatedAt": "2026-04-30T10:20:02.466Z",
+  "updatedAt": "2026-04-30T11:13:51.468Z",
   "channels": {
     "stable": {
       "app": {
@@ -197,7 +197,7 @@
             "owner": "jellyfin",
             "repo": "jellyfin-ffmpeg"
           },
-          "upstreamVersion": "7.1.3-5",
+          "upstreamVersion": "7.1.3-6",
           "recommendedVersion": "7.1.3-5",
           "publishedAt": "2026-04-05T16:03:50Z",
           "autoUpdate": false,
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "e58d8cc4b618e6c5647e87f5e15fd42e320343fe"
+  "sourceRevision": "fa7c605fae259605466a624bdb9763274df6705d"
 }
