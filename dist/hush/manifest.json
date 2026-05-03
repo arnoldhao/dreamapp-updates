@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "com.dreamapp.hush",
-  "manifestVersion": "2026.05.03.1",
+  "manifestVersion": "2026.05.03.915",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-03T03:56:39.161Z",
+  "updatedAt": "2026-05-03T06:27:51.494Z",
   "channels": {
     "stable": {
       "app": {
@@ -13,15 +13,15 @@
           "repo": "hush"
         },
         "version": "0.1.0",
-        "publishedAt": "2026-05-03T03:45:57Z",
-        "notes": "## 版本变更 / Changelog\n\n* No changes",
+        "publishedAt": "2026-05-03T05:53:01Z",
+        "notes": "## 版本变更 / Changelog\n\n- fix: release notes show (#3) by @arnoldhao\n  - fix: release notes show\n- fix: dmg and release notes (#2) by @arnoldhao\n  - fix: dmg and release notes\n- chore: add download url (#1) by @arnoldhao\n  - chore: add download url",
         "releasePage": "https://github.com/arnoldhao/hush/releases/tag/v0.1.0",
         "platforms": {
           "darwin-arm64": {
             "artifactName": "hush-macos-universal-0.1.0.zip",
             "contentType": "application/zip",
-            "size": 191789531,
-            "sha256": "f6f2dd308b688ccf747789cad12ffa247181f71d1b40947b6b4daf99e92556f7",
+            "size": 191935486,
+            "sha256": "e2db7d625e384080a3224b165b9568767fdddaa5457e40ed7f5059a1bb150881",
             "sources": [
               {
                 "name": "gh-proxy",
@@ -44,8 +44,8 @@
           "darwin-amd64": {
             "artifactName": "hush-macos-universal-0.1.0.zip",
             "contentType": "application/zip",
-            "size": 191789531,
-            "sha256": "f6f2dd308b688ccf747789cad12ffa247181f71d1b40947b6b4daf99e92556f7",
+            "size": 191935486,
+            "sha256": "e2db7d625e384080a3224b165b9568767fdddaa5457e40ed7f5059a1bb150881",
             "sources": [
               {
                 "name": "gh-proxy",
@@ -68,8 +68,8 @@
           "windows-amd64": {
             "artifactName": "hush-windows-x64-0.1.0-setup.exe",
             "contentType": "application/x-msdos-program",
-            "size": 90773703,
-            "sha256": "b9f76570e9c06dcb6b4b8146f0828637b252ad8ecac821449845ca0fa90f22ae",
+            "size": 90920592,
+            "sha256": "dad76e82df9ff8e19d80e6da7f93cf7f574dd13ba8c86cdc207c5dea8c9a76ec",
             "sources": [
               {
                 "name": "gh-proxy",
@@ -104,5 +104,6 @@
         }
       }
     }
-  }
+  },
+  "sourceRevision": "484d78436de7244055eb300f2a4cecee9066d7b5"
 }
