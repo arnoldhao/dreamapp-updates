@@ -9,6 +9,13 @@
 - `/dreamcreator/downloads/dreamcreator-macos-x64-latest.zip`
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest-installer.exe`
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest.zip`
+- `/hush/manifest.json`
+- `/hush/downloads/hush-macos-arm64-latest.zip`
+- `/hush/downloads/hush-macos-x64-latest.zip`
+- `/hush/downloads/hush-macos-universal-latest.zip`
+- `/hush/downloads/hush-macos-universal-latest.dmg`
+- `/hush/downloads/hush-windows-x64-latest-installer.exe`
+- `/hush/downloads/hush-windows-x64-latest-setup.exe`
 - `/xiadown/manifest.json`
 - `/xiadown/downloads/xiadown-macos-arm64-latest.zip`
 - `/xiadown/downloads/xiadown-macos-x64-latest.zip`

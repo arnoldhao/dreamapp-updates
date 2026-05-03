@@ -8,6 +8,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:dreamcreator": "node scripts/build.mjs --app dreamcreator",
+    "build:hush": "node scripts/build.mjs --app hush",
     "build:xiadown": "node scripts/build.mjs --app xiadown"
   }
 }

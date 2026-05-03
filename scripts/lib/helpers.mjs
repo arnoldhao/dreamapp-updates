@@ -6,6 +6,10 @@ const STRIPPED_RELEASE_NOTE_SECTIONS = [
     startMarker: "dreamapp-release-header:start",
     endMarker: "dreamapp-release-header:end",
   },
+  {
+    startMarker: "hush-release-header:start",
+    endMarker: "hush-release-header:end",
+  },
 ];
 
 export function assert(condition, message) {

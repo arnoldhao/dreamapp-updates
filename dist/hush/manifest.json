@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "appId": "com.dreamapp.hush",
+  "manifestVersion": "2026.05.03.1",
+  "defaultChannel": "stable",
+  "updatedAt": "2026-05-03T03:56:39.161Z",
+  "channels": {
+    "stable": {
+      "app": {
+        "source": {
+          "provider": "github-release",
+          "owner": "arnoldhao",
+          "repo": "hush"
+        },
+        "version": "0.1.0",
+        "publishedAt": "2026-05-03T03:45:57Z",
+        "notes": "## 版本变更 / Changelog\n\n* No changes",
+        "releasePage": "https://github.com/arnoldhao/hush/releases/tag/v0.1.0",
+        "platforms": {
+          "darwin-arm64": {
+            "artifactName": "hush-macos-universal-0.1.0.zip",
+            "contentType": "application/zip",
+            "size": 191789531,
+            "sha256": "f6f2dd308b688ccf747789cad12ffa247181f71d1b40947b6b4daf99e92556f7",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/hush/releases/download/v0.1.0/hush-macos-universal-0.1.0.zip",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/hush/releases/download/v0.1.0/hush-macos-universal-0.1.0.zip",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "archive",
+            "artifactType": "zip"
+          },
+          "darwin-amd64": {
+            "artifactName": "hush-macos-universal-0.1.0.zip",
+            "contentType": "application/zip",
+            "size": 191789531,
+            "sha256": "f6f2dd308b688ccf747789cad12ffa247181f71d1b40947b6b4daf99e92556f7",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/hush/releases/download/v0.1.0/hush-macos-universal-0.1.0.zip",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/hush/releases/download/v0.1.0/hush-macos-universal-0.1.0.zip",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "archive",
+            "artifactType": "zip"
+          },
+          "windows-amd64": {
+            "artifactName": "hush-windows-x64-0.1.0-setup.exe",
+            "contentType": "application/x-msdos-program",
+            "size": 90773703,
+            "sha256": "b9f76570e9c06dcb6b4b8146f0828637b252ad8ecac821449845ca0fa90f22ae",
+            "sources": [
+              {
+                "name": "gh-proxy",
+                "kind": "proxy",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/hush/releases/download/v0.1.0/hush-windows-x64-0.1.0-setup.exe",
+                "priority": 10,
+                "enabled": true
+              },
+              {
+                "name": "github",
+                "kind": "origin",
+                "url": "https://github.com/arnoldhao/hush/releases/download/v0.1.0/hush-windows-x64-0.1.0-setup.exe",
+                "priority": 20,
+                "enabled": true
+              }
+            ],
+            "installStrategy": "app-installer",
+            "artifactType": "exe"
+          }
+        }
+      },
+      "tools": {},
+      "dreamFm": {
+        "liveChannel": {
+          "schemaVersion": 1,
+          "url": "https://updates.dreamapp.cc/xiadown/dream.fm/live/2026.04.28.1/channel.json",
+          "version": "2026.04.28.1",
+          "updatedAt": "2026-04-28T11:32:39.000Z",
+          "minAppVersion": "0.0.1",
+          "ttlSeconds": 300,
+          "fallback": "embedded"
+        }
+      }
+    }
+  }
+}
