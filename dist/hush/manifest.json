@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "com.dreamapp.hush",
-  "manifestVersion": "2026.05.03.915",
+  "manifestVersion": "2026.05.03.916",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-03T06:27:51.494Z",
+  "updatedAt": "2026-05-03T07:24:46.763Z",
   "channels": {
     "stable": {
       "app": {
@@ -13,15 +13,15 @@
           "repo": "hush"
         },
         "version": "0.1.0",
-        "publishedAt": "2026-05-03T05:53:01Z",
-        "notes": "## 版本变更 / Changelog\n\n- fix: release notes show (#3) by @arnoldhao\n  - fix: release notes show\n- fix: dmg and release notes (#2) by @arnoldhao\n  - fix: dmg and release notes\n- chore: add download url (#1) by @arnoldhao\n  - chore: add download url",
+        "publishedAt": "2026-05-03T06:59:29Z",
+        "notes": "## 版本变更 / Changelog\n\n- fix: windows install path (#4) by @arnoldhao\n  - fix: windows install path\n- fix: release notes show (#3) by @arnoldhao\n  - fix: release notes show\n- fix: dmg and release notes (#2) by @arnoldhao\n  - fix: dmg and release notes\n- chore: add download url (#1) by @arnoldhao\n  - chore: add download url",
         "releasePage": "https://github.com/arnoldhao/hush/releases/tag/v0.1.0",
         "platforms": {
           "darwin-arm64": {
             "artifactName": "hush-macos-universal-0.1.0.zip",
             "contentType": "application/zip",
             "size": 191935486,
-            "sha256": "e2db7d625e384080a3224b165b9568767fdddaa5457e40ed7f5059a1bb150881",
+            "sha256": "1f86c47dd1eeb688b0af4224b9924775e96569d3b413491febaf6c7de4955503",
             "sources": [
               {
                 "name": "gh-proxy",
@@ -45,7 +45,7 @@
             "artifactName": "hush-macos-universal-0.1.0.zip",
             "contentType": "application/zip",
             "size": 191935486,
-            "sha256": "e2db7d625e384080a3224b165b9568767fdddaa5457e40ed7f5059a1bb150881",
+            "sha256": "1f86c47dd1eeb688b0af4224b9924775e96569d3b413491febaf6c7de4955503",
             "sources": [
               {
                 "name": "gh-proxy",
@@ -68,8 +68,8 @@
           "windows-amd64": {
             "artifactName": "hush-windows-x64-0.1.0-setup.exe",
             "contentType": "application/x-msdos-program",
-            "size": 90920592,
-            "sha256": "dad76e82df9ff8e19d80e6da7f93cf7f574dd13ba8c86cdc207c5dea8c9a76ec",
+            "size": 90920647,
+            "sha256": "e23ac3726e394e494e8d905121a9426e5044a17716316fa95e470e395b73be7e",
             "sources": [
               {
                 "name": "gh-proxy",
@@ -105,5 +105,5 @@
       }
     }
   },
-  "sourceRevision": "484d78436de7244055eb300f2a4cecee9066d7b5"
+  "sourceRevision": "da06ebf3e4bcd45261e33c982cc7cabe4641dd1e"
 }
