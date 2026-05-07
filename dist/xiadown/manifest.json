@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.05.07.1035",
+  "manifestVersion": "2026.05.07.1036",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-07T11:20:06.630Z",
+  "updatedAt": "2026-05-07T12:15:30.605Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.1.0",
-        "publishedAt": "2026-04-29T10:13:32Z",
-        "notes": "## 版本变更 / Changelog\n\n- fix: Welcome to XiaDown (#1) by @arnoldhao",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.1.0",
+        "version": "0.1.1",
+        "publishedAt": "2026-05-07T11:52:56Z",
+        "notes": "## 版本变更 / Changelog\n\n- feat: support codex pets (#2) by @arnoldhao\n  - 兼容 Codex Pets\n  - 统一应用界面样式\n  - 支持在转码时嵌入封面\n  - Added compatibility with Codex Pets\n  - Unified the application interface style\n  - Added support for embedding cover art during transcoding",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.1.1",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.1.0.zip",
+            "artifactName": "xiadown-macos-arm64-0.1.1.zip",
             "contentType": "application/zip",
-            "size": 16883124,
-            "sha256": "93f01316d05bde0308af57348f0dfc65f042af691693a6e4f7a3022ab80415b2",
+            "size": 13688888,
+            "sha256": "3b9e94407fda72cf2f7003a3f9beb0675052ac7015e51e77444cd46e89c0c228",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-arm64-0.1.0.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.1/xiadown-macos-arm64-0.1.1.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-arm64-0.1.0.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.1/xiadown-macos-arm64-0.1.1.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.1.0.zip",
+            "artifactName": "xiadown-macos-x64-0.1.1.zip",
             "contentType": "application/zip",
-            "size": 17896780,
-            "sha256": "b640fa94cec267f86be7bb1aa7d5c64f104283976bc33ff430d1faba97026113",
+            "size": 14663317,
+            "sha256": "50c4dc344f556f257c8ffaac2144a75741e25da543084086202464f1efa57acc",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-x64-0.1.0.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.1/xiadown-macos-x64-0.1.1.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-macos-x64-0.1.0.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.1/xiadown-macos-x64-0.1.1.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.1.0-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.1.1-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 19692616,
-            "sha256": "2b21e2616940102b1e8201141c450fc090d457251bd95079660f9cdeb88b61a7",
+            "size": 16507866,
+            "sha256": "e2225f343d3a02057a5480d66b298ac1fd95b3c8cd91cb5630775a5df2669a36",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-windows-x64-0.1.0-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.1/xiadown-windows-x64-0.1.1-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.0/xiadown-windows-x64-0.1.0-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.1/xiadown-windows-x64-0.1.1-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "7531c4b9db168f3563ba3cb254c0077eb131e317"
+  "sourceRevision": "5d2e0e62ad7559d84c3bdf38d15c61c4eb331c5c"
 }
