@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.05.07.1026",
+  "manifestVersion": "2026.05.07.1027",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-07T01:06:54.849Z",
+  "updatedAt": "2026-05-07T01:52:17.845Z",
   "channels": {
     "stable": {
       "app": {
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "cea7c1ca63eec1563b78b30d221862d3c58c94a8"
+  "sourceRevision": "8b2f45946eb1c997a529e4843ffa766575326aba"
 }
