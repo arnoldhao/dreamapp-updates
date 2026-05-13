@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.dreamcreator",
-  "manifestVersion": "2026.05.13.1200",
+  "manifestVersion": "2026.05.13.1201",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-13T02:29:46.659Z",
+  "updatedAt": "2026-05-13T03:57:22.662Z",
   "channels": {
     "stable": {
       "app": {
@@ -303,7 +303,7 @@
             "owner": "oven-sh",
             "repo": "bun"
           },
-          "upstreamVersion": "1.3.13",
+          "upstreamVersion": "1.3.14",
           "recommendedVersion": "1.3.11",
           "publishedAt": "2026-03-18T04:31:40Z",
           "autoUpdate": false,
@@ -401,5 +401,5 @@
       }
     }
   },
-  "sourceRevision": "d439c91f37888bd389534f83f33569e2d5741170"
+  "sourceRevision": "78ffea181df103eb3a51e7216a4ba77aa8851b53"
 }
