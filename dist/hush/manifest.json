@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "com.dreamapp.hush",
-  "manifestVersion": "2026.05.16.1278",
+  "manifestVersion": "2026.05.16.1279",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-16T06:06:36.831Z",
+  "updatedAt": "2026-05-16T07:00:09.429Z",
   "channels": {
     "stable": {
       "app": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "sourceRevision": "4a6d140b119bd7384246dc296062cac787b6ba8e"
+  "sourceRevision": "14dda1f0d952c0e82d41abc71644e4e722e9a4a3"
 }
