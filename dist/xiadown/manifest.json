@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.05.16.1282",
+  "manifestVersion": "2026.05.16.1283",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-16T09:42:49.177Z",
+  "updatedAt": "2026-05-16T10:35:31.037Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.1.2",
-        "publishedAt": "2026-05-07T14:47:40Z",
-        "notes": "## 版本变更 / Changelog\n\n- feat: add playground (#3) by @arnoldhao\n  - feat: add playground",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.1.2",
+        "version": "0.2.0",
+        "publishedAt": "2026-05-16T10:21:39Z",
+        "notes": "## 版本变更 / Changelog\n\n## ✨ Features\n\n- feat: Added selectable CDP browser support (#7) by @arnoldhao\n  - Resolves #5 简体中文\n  - 扩展 macOS、Windows 与 Linux 的 CDP 浏览器探测，支持 Chrome、Edge、Brave、Chromium、Vivaldi、Opera、Arc 与 Yandex\n  - 在设置常规页新增默认浏览器选择与手动刷新入口，刷新时显示按钮 loading 并复用最新候选列表\n  - 将默认浏览器配置接入连接器登录、站点打开与宠物画廊在线导入流程\n  - 持久化默认浏览器设置并补充 SQLite 迁移、Wails 接口、i18n 与前端类型\n  - 收紧 CDP 启动参数为本机调试地址并补充探测、偏好选择与服务注入测试\n  - English\n  - Expanded macOS, Windows, and Linux CDP browser detection for Chrome, Edge, Brave, Chromium, Vivaldi, Opera, Arc, and Yandex\n  - Added the default browser selector and manual refresh button to General settings, with button loading state and refreshed candidate caching\n  - Wired the default browser setting into connector login, site opening, and pet gallery online import flows\n  - Persi…",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.2.0",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.1.2.zip",
+            "artifactName": "xiadown-macos-arm64-0.2.0.zip",
             "contentType": "application/zip",
-            "size": 13693609,
-            "sha256": "e5e76ba0c38e7b315d121452e7a4bcda75ebd4c2ac9f7004ef390e13201f9e12",
+            "size": 13982431,
+            "sha256": "b7a8c8344e2d1c529a0aee98ce5f80cbaaf48c8236fd789c2368fdc1588b7974",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.2/xiadown-macos-arm64-0.1.2.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.2.0/xiadown-macos-arm64-0.2.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.2/xiadown-macos-arm64-0.1.2.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.2.0/xiadown-macos-arm64-0.2.0.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.1.2.zip",
+            "artifactName": "xiadown-macos-x64-0.2.0.zip",
             "contentType": "application/zip",
-            "size": 14668098,
-            "sha256": "a44864d50b51923d0006268f38873a88b64c66c14510489e6ad3038f50c3ec76",
+            "size": 14974360,
+            "sha256": "2f79e086b02a96265594eae57d8cd622d2beab040d55369cd6709785b1143298",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.2/xiadown-macos-x64-0.1.2.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.2.0/xiadown-macos-x64-0.2.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.2/xiadown-macos-x64-0.1.2.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.2.0/xiadown-macos-x64-0.2.0.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.1.2-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.2.0-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 16512438,
-            "sha256": "dd2cf8c555a20f3f4bcdcab68e0e74e36ca9f1e29113e4416470b1796cdca1fe",
+            "size": 16815371,
+            "sha256": "cc53d2dff81408900b5bcb6a737478629b9d62b052e9185b041245f794d31d67",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.1.2/xiadown-windows-x64-0.1.2-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.2.0/xiadown-windows-x64-0.2.0-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.1.2/xiadown-windows-x64-0.1.2-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.2.0/xiadown-windows-x64-0.2.0-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "ec74740270e4b6984fac380cb6ac0b83b2224c01"
+  "sourceRevision": "45fea2976ea3c44f42bc4ba21cfdec363420d45a"
 }
