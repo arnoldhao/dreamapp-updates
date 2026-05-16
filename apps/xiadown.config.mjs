@@ -22,7 +22,7 @@ export default {
         },
         notes: {
           from: "release-body",
-          maxLength: 800,
+          maxLength: 5000,
         },
         downloadAliases: [
           {
