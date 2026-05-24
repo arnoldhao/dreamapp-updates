@@ -43,6 +43,11 @@ const bunSource = {
   versionPrefixes: ["bun-v", "v"],
 };
 
+const bunPinnedReleaseSelector = {
+  type: "tag",
+  tag: "bun-v1.3.14",
+};
+
 export default {
   path: "dreamcreator",
   appId: "cc.dreamapp.dreamcreator",
@@ -240,18 +245,12 @@ export default {
           kind: "external-tool",
           source: bunSource,
           upstream: {
-            selector: {
-              type: "latest",
-              prerelease: false,
-            },
+            selector: bunPinnedReleaseSelector,
           },
           recommended: {
-            selector: {
-              type: "tag",
-              tag: "bun-v1.3.11",
-            },
+            selector: bunPinnedReleaseSelector,
           },
-          notes: "Pinned to a validated Bun release for the stable channel.",
+          notes: "Pinned to the maximum Bun release supported by yt-dlp.",
           autoUpdate: false,
           required: false,
           compatibility: {
@@ -384,18 +383,12 @@ export default {
           kind: "external-tool",
           source: bunSource,
           upstream: {
-            selector: {
-              type: "latest",
-              prerelease: false,
-            },
+            selector: bunPinnedReleaseSelector,
           },
           recommended: {
-            selector: {
-              type: "latest",
-              prerelease: false,
-            },
+            selector: bunPinnedReleaseSelector,
           },
-          notes: "Beta channel follows the latest validated Bun release.",
+          notes: "Pinned to the maximum Bun release supported by yt-dlp.",
           autoUpdate: false,
           required: false,
           compatibility: {

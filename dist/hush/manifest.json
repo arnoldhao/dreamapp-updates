@@ -3,7 +3,7 @@
   "appId": "com.dreamapp.hush",
   "manifestVersion": "2026.05.24.1495",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-24T10:42:48.065Z",
+  "updatedAt": "2026-05-24T11:31:41.085Z",
   "channels": {
     "stable": {
       "app": {
