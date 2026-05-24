@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.05.24.1493",
+  "manifestVersion": "2026.05.24.1494",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-24T09:46:32.179Z",
+  "updatedAt": "2026-05-24T10:39:06.820Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.3.0",
-        "publishedAt": "2026-05-24T09:03:10Z",
-        "notes": "## 版本变更 / Changelog\n\n## ✨ Features\n\n- feat: sniff (#15) by @arnoldhao\n  - 新增功能\n  - 新增「嗅探」功能，用于识别网页中的可下载资源。\n  - 新增「新建下载」中的嗅探下载方式，支持通过嗅探方式下载部分网站资源。\n  - 新增「嗅探台」，支持对任意网站进行资源嗅探，并选择特定文件进行后续操作。\n  - 新增播放器均衡器，支持 22 个预设方案，也支持自定义均衡器配置。仅 macOS 支持。\n  - 新增播放器频谱可视化，支持封面与频谱两种类型，共 8 种可视化样式。仅 macOS 支持。\n  - 修复问题\n  - 修复当前歌曲为播放队列最后一首时，无法点击「下一首」的问题。\n  - 修复歌曲包含多位歌手时，点击歌手可能被错误识别为同一人的问题。\n  - 修复「已结束」页面预览视频时，最大化与全屏按钮行为异常的问题。\n  - 修复「已结束」页面任务时间显示不正确的问题。\n  - 优化更新\n  - 优化「已结束」页面头部按钮，现在支持全选操作。\n  - 更新配置页面标签，新增「均衡器」标签，并移除「宠物」标签。\n  - 优化侧边栏迷你播放器按钮，现在支持加载状态显示。\n  - 更新连接模块，现在支持持久化完整的浏览器 Profile。\n  - 框架升级\n  - Wails 3 升级至 Alpha 95。\n  - New Features\n  - Added the new Sniff feature for detecting downloadable resources from web pages.\n  - Added a Sniff download method when creating a new download task, supporting resource downloads from selected websites through sniffing.\n  - Added Sniff Desk, allowing you to sniff resources from any website and select specific files for follow-up actions.\n  - Added a player equalizer with 22 presets and support for custom equalizer settings. macOS only.\n  - Added player spectrum visualization, including cover-based and spectrum-based modes with 8 visualization styles in total. macOS only.\n  - Fixes\n  - Fixed an issue where the Next button could not be clicked when the current track was the last item in the queue.\n  - Fixed an issue where multiple artists in a track could be incorrectly recognized as the same artist when clicked.\n  - Fixed incorrect maximize and fullscreen button behavior when previewing videos on the Completed page.\n  - Fixed incorrect task time display on the Completed page.\n  - Improvements\n  - Improved the header actions on the Completed page. Select All is now supported.\n  - Updated the Settings page tabs by adding Equalizer and removing Pets.\n  - Improved the sidebar mini player buttons with loading state support.\n  - Updated the Connection module to support persistent full browser profiles.\n  - Framework\n  - Upgraded Wails 3 to Alpha 95.",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.3.0",
+        "version": "0.3.1",
+        "publishedAt": "2026-05-24T10:31:26Z",
+        "notes": "## 版本变更 / Changelog\n\n## 🧰 Chore/Build/CI\n\n- fix: macOS app bundle name (#16) by @arnoldhao\n  - fix: macOS app bundle name",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.3.1",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.3.0.zip",
+            "artifactName": "xiadown-macos-arm64-0.3.1.zip",
             "contentType": "application/zip",
-            "size": 14620556,
-            "sha256": "d8b36e5803771f9f135976253ec032974f37c1f85e93cf1eed268955df609b6f",
+            "size": 14620569,
+            "sha256": "0588801870d9fc68afccbf32fdafcf584c8222530ca6d42838e14bd3dd4a5bd4",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.0/xiadown-macos-arm64-0.3.0.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.1/xiadown-macos-arm64-0.3.1.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.0/xiadown-macos-arm64-0.3.0.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.1/xiadown-macos-arm64-0.3.1.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.3.0.zip",
+            "artifactName": "xiadown-macos-x64-0.3.1.zip",
             "contentType": "application/zip",
-            "size": 15673056,
-            "sha256": "bd8fb7393454e968d87ffe3d5abdfba8af290a0817a43c2bc351b13732b16504",
+            "size": 15673057,
+            "sha256": "63a0b8c2cfdfbcf20d5db5549d8124a6d92ce352085e32064c9747dec94ef7c2",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.0/xiadown-macos-x64-0.3.0.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.1/xiadown-macos-x64-0.3.1.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.0/xiadown-macos-x64-0.3.0.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.1/xiadown-macos-x64-0.3.1.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.3.0-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.3.1-installer.exe",
             "contentType": "application/x-msdos-program",
-            "size": 17458591,
-            "sha256": "ab37ca8ada0c0a8401eb6148cb3fb1ba7f17ad53030e7e045995b4f04db76566",
+            "size": 17458594,
+            "sha256": "ed03d0888c8cc7d377b0b02c96430c28c58768775173315f3c4120993cbdc506",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.0/xiadown-windows-x64-0.3.0-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.1/xiadown-windows-x64-0.3.1-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.0/xiadown-windows-x64-0.3.0-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.1/xiadown-windows-x64-0.3.1-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "fd051d5eccbef2609bf505cbda0ae0fe4371363c"
+  "sourceRevision": "7b475283b22b92f89dd668787ad01ea361204fe6"
 }
