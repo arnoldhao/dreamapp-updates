@@ -109,6 +109,10 @@ async function buildChannelEntry({ channelName, channelConfig, appConfig, client
     tools,
   };
 
+  if (channelConfig.listen) {
+    entry.listen = channelConfig.listen;
+  }
+
   if (channelConfig.dreamFm) {
     entry.dreamFm = channelConfig.dreamFm;
   }

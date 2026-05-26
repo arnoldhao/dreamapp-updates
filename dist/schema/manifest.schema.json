@@ -62,10 +62,16 @@
             "$ref": "#/$defs/toolRelease"
           }
         },
+        "listen": {
+          "$ref": "#/$defs/listen"
+        },
         "dreamFm": {
           "$ref": "#/$defs/dreamFm"
         }
       }
+    },
+    "listen": {
+      "$ref": "#/$defs/dreamFm"
     },
     "dreamFm": {
       "type": "object",

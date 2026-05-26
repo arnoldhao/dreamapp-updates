@@ -399,7 +399,7 @@
           }
         }
       },
-      "dreamFm": {
+      "listen": {
         "liveChannel": {
           "schemaVersion": 1,
           "url": "https://updates.dreamapp.cc/xiadown/dream.fm/live/2026.05.26.1/channel.json",
