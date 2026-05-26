@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "dreamfm.live.channel",
-  "version": "2026.04.28.1",
-  "updatedAt": "2026-04-28T11:32:39.000Z",
+  "version": "2026.05.26.1",
+  "updatedAt": "2026-05-26T09:41:13.000Z",
   "ttlSeconds": 300,
   "groups": [
     {
@@ -13,7 +13,7 @@
           "id": "live-lofi-girl-study",
           "group": "live",
           "source": "youtube_music",
-          "videoId": "jfKfPfyJRdk",
+          "videoId": "EWrX250Zhko",
           "title": "lofi hip hop radio 📚",
           "channel": "Lofi Girl",
           "description": "lofi hip hop radio 📚 beats to relax/study to",
@@ -21,7 +21,22 @@
           "thumbnailUrl": "https://yt3.ggpht.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg",
           "playback": {
             "kind": "youtube_music",
-            "videoId": "jfKfPfyJRdk"
+            "videoId": "EWrX250Zhko"
+          }
+        },
+        {
+          "id": "live-claude-fm",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "YmQ7jRgf4f0",
+          "title": "Claude FM 🎵",
+          "channel": "Claude",
+          "description": "music for thinking and building",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YmQ7jRgf4f0/maxresdefault.jpg",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "YmQ7jRgf4f0"
           }
         },
         {
@@ -79,7 +94,7 @@
           "id": "live-lofi-girl-sleep",
           "group": "live",
           "source": "youtube_music",
-          "videoId": "28KRPhVzCus",
+          "videoId": "JD-kMIpDfnY",
           "title": "lofi hip hop radio 💤",
           "channel": "Lofi Girl",
           "description": "lofi hip hop radio 💤 beats to sleep/chill to",
@@ -87,7 +102,22 @@
           "thumbnailUrl": "https://yt3.ggpht.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg",
           "playback": {
             "kind": "youtube_music",
-            "videoId": "28KRPhVzCus"
+            "videoId": "JD-kMIpDfnY"
+          }
+        },
+        {
+          "id": "live-purrple-cat",
+          "group": "live",
+          "source": "youtube_music",
+          "videoId": "OFsJen4j9VY",
+          "title": "Purrple Cat 💜",
+          "channel": "Purrple Cat",
+          "description": "Distant worlds illuminate the room, painting dreams with celestial hues. 🪐",
+          "durationLabel": "LIVE",
+          "thumbnailUrl": "https://i.ytimg.com/vi/OFsJen4j9VY/maxresdefault.jpg",
+          "playback": {
+            "kind": "youtube_music",
+            "videoId": "OFsJen4j9VY"
           }
         },
         {
@@ -115,7 +145,7 @@
           "id": "live-lofi-girl-jazz",
           "group": "live",
           "source": "youtube_music",
-          "videoId": "HuFYqnbVbzY",
+          "videoId": "E2vONfzoyRI",
           "title": "jazz lofi radio 🎷",
           "channel": "Lofi Girl",
           "description": "jazz lofi radio 🎷 beats to chill/study to",
@@ -123,7 +153,7 @@
           "thumbnailUrl": "https://yt3.ggpht.com/_BSh2VVvVMzqBoKyWbQnyC35XFOV-ZbXavf9nfu3ZjpFUGEImQnlWt9ZlpfGQBqWEbGNc4rPWg",
           "playback": {
             "kind": "youtube_music",
-            "videoId": "HuFYqnbVbzY"
+            "videoId": "E2vONfzoyRI"
           }
         },
         {
