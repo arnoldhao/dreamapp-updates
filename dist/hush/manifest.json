@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "com.dreamapp.hush",
-  "manifestVersion": "2026.05.26.1546",
+  "manifestVersion": "2026.05.26.1548",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-26T09:58:26.302Z",
+  "updatedAt": "2026-05-26T13:38:46.697Z",
   "channels": {
     "stable": {
       "app": {
@@ -91,19 +91,8 @@
           }
         }
       },
-      "tools": {},
-      "dreamFm": {
-        "liveChannel": {
-          "schemaVersion": 1,
-          "url": "https://updates.dreamapp.cc/xiadown/dream.fm/live/2026.05.26.1/channel.json",
-          "version": "2026.05.26.1",
-          "updatedAt": "2026-05-26T09:41:13.000Z",
-          "minAppVersion": "0.0.1",
-          "ttlSeconds": 300,
-          "fallback": "embedded"
-        }
-      }
+      "tools": {}
     }
   },
-  "sourceRevision": "52e5c81f67fa89bfd19455d9ba7601dd66592e4d"
+  "sourceRevision": "b5bf6bec3c514713e8b55bfd4ab5fecb31175a53"
 }
