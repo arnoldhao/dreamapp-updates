@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "build:auto": "node scripts/build.mjs --exclude-app xiadown",
+    "build:auto": "node scripts/build.mjs --exclude-app xiadown,hush",
     "build:dreamcreator": "node scripts/build.mjs --app dreamcreator",
     "build:hush": "node scripts/build.mjs --app hush",
     "build:xiadown": "node scripts/build.mjs --app xiadown"
