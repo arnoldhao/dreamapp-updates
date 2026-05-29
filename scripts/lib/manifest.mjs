@@ -1,4 +1,11 @@
-import { buildDownloadSources, buildNotes, formatManifestVersion, isHexSha256, assert } from "./helpers.mjs";
+import {
+  buildDownloadSources,
+  buildNotes,
+  formatManifestVersion,
+  isHexSha256,
+  renderTemplate,
+  assert,
+} from "./helpers.mjs";
 import {
   GitHubClient,
   extractSha256,
@@ -36,6 +43,7 @@ export async function buildAppManifest({
   }
 
   const redirects = [];
+  const files = [];
   let redirectsIncomplete = false;
   const redirectWarnings = [];
   for (const [channelName, channelConfig] of Object.entries(appConfig.channels)) {
@@ -43,6 +51,7 @@ export async function buildAppManifest({
       const {
         entry,
         redirects: channelRedirects,
+        files: channelFiles,
         redirectsIncomplete: channelRedirectsIncomplete,
         redirectWarnings: channelRedirectWarnings,
       } = await buildChannelEntry({
@@ -54,6 +63,7 @@ export async function buildAppManifest({
       if (entry) {
         manifest.channels[channelName] = entry;
         redirects.push(...channelRedirects);
+        files.push(...channelFiles);
         redirectsIncomplete = redirectsIncomplete || Boolean(channelRedirectsIncomplete);
         redirectWarnings.push(...(channelRedirectWarnings ?? []));
       }
@@ -80,13 +90,20 @@ export async function buildAppManifest({
     manifest,
     manifestUrl: `${publicBaseUrl}/${appConfig.path}/manifest.json`,
     redirects,
+    files,
     redirectsIncomplete,
     redirectWarnings,
   };
 }
 
 async function buildChannelEntry({ channelName, channelConfig, appConfig, client }) {
-  const { entry: appEntry, redirects, redirectsIncomplete, redirectWarnings } = await buildAppReleaseEntry({
+  const {
+    entry: appEntry,
+    redirects,
+    files,
+    redirectsIncomplete,
+    redirectWarnings,
+  } = await buildAppReleaseEntry({
     channelName,
     appReleaseConfig: channelConfig.app,
     appPath: appConfig.path,
@@ -120,6 +137,7 @@ async function buildChannelEntry({ channelName, channelConfig, appConfig, client
   return {
     entry,
     redirects,
+    files,
     redirectsIncomplete,
     redirectWarnings,
   };
@@ -146,16 +164,20 @@ async function buildAppReleaseEntry({ channelName, appReleaseConfig, appPath, de
     defaults,
   });
   let redirects = [];
+  let files = [];
   let redirectsIncomplete = false;
   const redirectWarnings = [];
   try {
-    redirects = buildDownloadAliasEntries({
+    const aliasEntries = await buildDownloadAliasEntries({
       aliasConfigs: appReleaseConfig.downloadAliases,
       appPath,
       release,
       version,
       defaults,
+      client,
     });
+    redirects = aliasEntries.redirects;
+    files = aliasEntries.files;
   } catch (error) {
     if (!isReleaseIncompleteError(error)) {
       throw error;
@@ -174,6 +196,7 @@ async function buildAppReleaseEntry({ channelName, appReleaseConfig, appPath, de
       platforms,
     },
     redirects,
+    files,
     redirectsIncomplete,
     redirectWarnings,
   };
@@ -222,6 +245,7 @@ async function buildFallbackAppReleaseEntry({ appReleaseConfig, defaults, client
       platforms,
     },
     redirects: [],
+    files: [],
     redirectsIncomplete: false,
     redirectWarnings: [],
   };
@@ -326,13 +350,23 @@ function toSourceRef(sourceConfig) {
   };
 }
 
-function buildDownloadAliasEntries({ aliasConfigs, appPath, release, version, defaults }) {
+async function buildDownloadAliasEntries({ aliasConfigs, appPath, release, version, defaults, client }) {
   if (!Array.isArray(aliasConfigs) || aliasConfigs.length === 0) {
-    return [];
+    return {
+      redirects: [],
+      files: [],
+    };
   }
 
-  return aliasConfigs.map((aliasConfig) => {
-    const route = String(aliasConfig?.route || "").trim().replace(/^\/+/, "");
+  const redirects = [];
+  const files = [];
+  for (const aliasConfig of aliasConfigs) {
+    const route = renderTemplate(String(aliasConfig?.route || ""), {
+      version,
+      tag: release.tag_name,
+    })
+      .trim()
+      .replace(/^\/+/, "");
     assert(route, `release ${release.tag_name} is missing a download alias route`);
 
     const asset = findAsset(release.assets, aliasConfig.asset, {
@@ -351,12 +385,27 @@ function buildDownloadAliasEntries({ aliasConfigs, appPath, release, version, de
 
     assert(selectedSource, `download alias ${route} source not found`);
 
-    return {
+    const outputPath = `/${String(appPath || "").replace(/^\/+|\/+$/g, "")}/${route}`;
+
+    if (aliasConfig.writeContent) {
+      files.push({
+        path: outputPath,
+        content: await client.fetchAssetContent(asset, { as: "text" }),
+      });
+      continue;
+    }
+
+    redirects.push({
       from: `/${String(appPath || "").replace(/^\/+|\/+$/g, "")}/${route}`,
       to: selectedSource.url,
       status: Number(aliasConfig.statusCode ?? 302),
-    };
-  });
+    });
+  }
+
+  return {
+    redirects,
+    files,
+  };
 }
 
 function validateAppConfig(appConfig, appName) {

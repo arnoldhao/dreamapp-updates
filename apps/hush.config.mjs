@@ -26,6 +26,55 @@ export default {
         },
         downloadAliases: [
           {
+            route: "downloads/latest-mac.yml",
+            asset: {
+              name: "latest-mac.yml",
+            },
+            writeContent: true,
+          },
+          {
+            route: "downloads/latest.yml",
+            asset: {
+              name: "latest.yml",
+            },
+            writeContent: true,
+          },
+          {
+            route: "downloads/hush-macos-universal-{version}.zip",
+            asset: {
+              name: "hush-macos-universal-{version}.zip",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/hush-macos-universal-{version}.zip.blockmap",
+            asset: {
+              name: "hush-macos-universal-{version}.zip.blockmap",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/hush-macos-universal-{version}.dmg",
+            asset: {
+              name: "hush-macos-universal-{version}.dmg",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/hush-windows-x64-{version}-setup.exe",
+            asset: {
+              name: "hush-windows-x64-{version}-setup.exe",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/hush-windows-x64-{version}-setup.exe.blockmap",
+            asset: {
+              name: "hush-windows-x64-{version}-setup.exe.blockmap",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
             route: "downloads/hush-macos-arm64-latest.zip",
             asset: {
               name: "hush-macos-universal-{version}.zip",

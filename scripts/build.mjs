@@ -69,6 +69,7 @@ for (const app of appConfigs) {
       built = {
         ...built,
         redirects: previous.redirects,
+        files: previous.files ?? built.files,
         redirectsIncomplete: false,
       };
       console.warn(
@@ -109,6 +110,10 @@ for (const app of preservedAppConfigs) {
 const outputs = allAppConfigs
   .map((app) => outputsByName.get(app.name))
   .filter(Boolean);
+
+for (const output of outputs) {
+  await writeGeneratedFiles(distDir, output.files ?? []);
+}
 
 await ensureDir(path.join(distDir, "schema"));
 await fs.copyFile(schemaFile, path.join(distDir, "schema", "manifest.schema.json"));
@@ -213,10 +218,63 @@ async function loadExistingBuilds(directory, appConfigs, publicBaseUrl) {
       manifest,
       manifestUrl: `${publicBaseUrl}/${app.config.path}/manifest.json`,
       redirects: redirects.filter((entry) => entry.from.startsWith(`/${app.config.path}/`)),
+      files: await loadExistingGeneratedFiles(directory, app.config.path),
     });
   }
 
   return result;
+}
+
+async function loadExistingGeneratedFiles(directory, appPath) {
+  const downloadsDir = path.join(directory, appPath, "downloads");
+  const files = [];
+  await collectFiles(downloadsDir, files, downloadsDir, appPath);
+  return files;
+}
+
+async function collectFiles(directory, files, rootDirectory, appPath) {
+  let entries;
+  try {
+    entries = await fs.readdir(directory, { withFileTypes: true });
+  } catch (error) {
+    if (error && error.code === "ENOENT") {
+      return;
+    }
+    throw error;
+  }
+
+  for (const entry of entries) {
+    const filePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      await collectFiles(filePath, files, rootDirectory, appPath);
+      continue;
+    }
+    if (!entry.isFile()) {
+      continue;
+    }
+
+    const relativePath = path.relative(rootDirectory, filePath).split(path.sep).join("/");
+    files.push({
+      path: `/${appPath}/downloads/${relativePath}`,
+      content: await fs.readFile(filePath, "utf8"),
+    });
+  }
+}
+
+async function writeGeneratedFiles(directory, files) {
+  for (const file of files) {
+    const relativePath = String(file?.path || "").replace(/^\/+/, "");
+    assert(relativePath, "generated file path is required");
+
+    const targetPath = path.resolve(directory, relativePath);
+    assert(
+      targetPath === directory || targetPath.startsWith(`${directory}${path.sep}`),
+      `generated file escapes dist directory: ${file.path}`,
+    );
+
+    await ensureDir(path.dirname(targetPath));
+    await fs.writeFile(targetPath, String(file.content ?? ""), "utf8");
+  }
 }
 
 async function loadRedirects(filePath) {

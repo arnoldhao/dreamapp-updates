@@ -1,0 +1,8 @@
+version: 0.1.0
+files:
+  - url: hush-windows-x64-0.1.0-setup.exe
+    sha512: Tz5i5qg1W8cg9kelt2vYoVwsM8fgR7Kv8colJHWl+KP798GmWDBYiYH5XxffddaegmXdPTovPcfOmLGlG8m73Q==
+    size: 90920647
+path: hush-windows-x64-0.1.0-setup.exe
+sha512: Tz5i5qg1W8cg9kelt2vYoVwsM8fgR7Kv8colJHWl+KP798GmWDBYiYH5XxffddaegmXdPTovPcfOmLGlG8m73Q==
+releaseDate: '2026-05-03T07:01:26.628Z'

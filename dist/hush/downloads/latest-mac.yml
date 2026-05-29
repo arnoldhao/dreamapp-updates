@@ -1,0 +1,11 @@
+version: 0.1.0
+files:
+  - url: hush-macos-universal-0.1.0.zip
+    sha512: 4uZ41sMp7GA7faEl4dePrlaPmx/cxFl2w9/1gdokbr7FCnUTBlIub09Cmt3aQ9oq5Gbn7xNmkZQSnk6uUtbdVA==
+    size: 191935486
+  - url: hush-macos-universal-0.1.0.dmg
+    sha512: R+yWb8YfEQd9fDk/6pUwm7vJAMmniM+7x576vwQBIWrpvAmNGexb84W04RmMqpOzmCLegZjui5bmk/BgRcOqsQ==
+    size: 201699174
+path: hush-macos-universal-0.1.0.zip
+sha512: 4uZ41sMp7GA7faEl4dePrlaPmx/cxFl2w9/1gdokbr7FCnUTBlIub09Cmt3aQ9oq5Gbn7xNmkZQSnk6uUtbdVA==
+releaseDate: '2026-05-03T07:01:45.964Z'

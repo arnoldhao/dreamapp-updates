@@ -10,6 +10,8 @@
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest-installer.exe`
 - `/dreamcreator/downloads/dreamcreator-windows-x64-latest.zip`
 - `/hush/manifest.json`
+- `/hush/downloads/latest-mac.yml`
+- `/hush/downloads/latest.yml`
 - `/hush/downloads/hush-macos-arm64-latest.zip`
 - `/hush/downloads/hush-macos-x64-latest.zip`
 - `/hush/downloads/hush-macos-universal-latest.zip`
