@@ -21,9 +21,15 @@ const githubToken = String(process.env.GITHUB_TOKEN || "");
 const sourceRevision = String(process.env.GITHUB_SHA || "");
 const runNumber = String(process.env.GITHUB_RUN_NUMBER || "1");
 
-const appConfigs = await loadAppConfigs(appsDir, options.app);
+const allAppConfigs = await loadAppConfigs(appsDir);
+const appConfigs = selectAppConfigs(allAppConfigs, options);
 assert(appConfigs.length > 0, "no app configs matched the requested filter");
-const previousBuilds = await loadExistingBuilds(distDir, appConfigs, publicBaseUrl);
+const scopedBuild = Boolean(options.app) || options.excludeApps.length > 0;
+const selectedAppNames = new Set(appConfigs.map((app) => app.name));
+const preservedAppConfigs = scopedBuild
+  ? allAppConfigs.filter((app) => !selectedAppNames.has(app.name))
+  : [];
+const previousBuilds = await loadExistingBuilds(distDir, allAppConfigs, publicBaseUrl);
 const githubClient = new GitHubClient({ token: githubToken });
 
 await fs.rm(distDir, { recursive: true, force: true });
@@ -31,6 +37,7 @@ await ensureDir(distDir);
 await copyDirectory(staticDir, distDir);
 
 const generated = [];
+const outputsByName = new Map();
 for (const app of appConfigs) {
   let built;
   const previous = previousBuilds.get(app.name);
@@ -82,8 +89,26 @@ for (const app of appConfigs) {
   const manifestPath = path.join(distDir, built.path, "manifest.json");
   await writeJson(manifestPath, built.manifest);
   generated.push(built);
+  outputsByName.set(app.name, built);
   console.log(`[dreamapp-updates] generated ${built.path}/manifest.json`);
 }
+
+for (const app of preservedAppConfigs) {
+  const previous = previousBuilds.get(app.name);
+  if (!previous) {
+    console.warn(`[dreamapp-updates] no previous ${app.config.path}/manifest.json to preserve`);
+    continue;
+  }
+
+  const manifestPath = path.join(distDir, previous.path, "manifest.json");
+  await writeJson(manifestPath, previous.manifest);
+  outputsByName.set(app.name, previous);
+  console.log(`[dreamapp-updates] preserved ${previous.path}/manifest.json`);
+}
+
+const outputs = allAppConfigs
+  .map((app) => outputsByName.get(app.name))
+  .filter(Boolean);
 
 await ensureDir(path.join(distDir, "schema"));
 await fs.copyFile(schemaFile, path.join(distDir, "schema", "manifest.schema.json"));
@@ -91,7 +116,7 @@ await fs.copyFile(schemaFile, path.join(distDir, "schema", "manifest.schema.json
 await writeJson(path.join(distDir, "index.json"), {
   schemaVersion: 1,
   updatedAt: new Date().toISOString(),
-  apps: generated.map((item) => ({
+  apps: outputs.map((item) => ({
     appId: item.appId,
     path: item.path,
     manifestUrl: item.manifestUrl,
@@ -99,7 +124,7 @@ await writeJson(path.join(distDir, "index.json"), {
 });
 
 const staticRedirects = await loadRedirects(path.join(distDir, "_redirects"));
-const generatedRedirects = generated.flatMap((item) => item.redirects ?? []);
+const generatedRedirects = outputs.flatMap((item) => item.redirects ?? []);
 await writeRedirects(path.join(distDir, "_redirects"), [...staticRedirects, ...generatedRedirects]);
 
 console.log(`[dreamapp-updates] wrote ${generated.length} manifest(s) to ${distDir}`);
@@ -107,6 +132,7 @@ console.log(`[dreamapp-updates] wrote ${generated.length} manifest(s) to ${distD
 function parseArgs(argv) {
   const options = {
     app: "",
+    excludeApps: [],
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -114,6 +140,10 @@ function parseArgs(argv) {
     switch (current) {
       case "--app":
         options.app = String(argv[index + 1] || "").trim();
+        index += 1;
+        break;
+      case "--exclude-app":
+        options.excludeApps.push(...parseAppList(argv[index + 1]));
         index += 1;
         break;
       default:
@@ -124,7 +154,24 @@ function parseArgs(argv) {
   return options;
 }
 
-async function loadAppConfigs(directory, appFilter) {
+function parseAppList(value) {
+  return String(value || "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function selectAppConfigs(appConfigs, options) {
+  const excludeApps = new Set(options.excludeApps);
+  return appConfigs.filter((app) => {
+    if (options.app && options.app !== app.name) {
+      return false;
+    }
+    return !excludeApps.has(app.name);
+  });
+}
+
+async function loadAppConfigs(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   const candidates = entries
     .filter((entry) => entry.isFile() && entry.name.endsWith(".config.mjs"))
@@ -133,9 +180,6 @@ async function loadAppConfigs(directory, appFilter) {
   const result = [];
   for (const candidate of candidates) {
     const appName = candidate.name.replace(/\.config\.mjs$/, "");
-    if (appFilter && appFilter !== appName) {
-      continue;
-    }
 
     const filePath = path.join(directory, candidate.name);
     const module = await import(pathToFileURL(filePath).href);

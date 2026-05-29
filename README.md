@@ -41,11 +41,13 @@
 
 ## GitHub Actions
 
-本仓库使用 `.github/workflows/deploy.yml` 定时刷新 `dist/` 中的清单文件。
+本仓库使用 `.github/workflows/deploy.yml` 定时刷新 `dist/` 中的清单文件，但不会自动检测 `xiadown` 的软件版本。
 
 默认行为：
 
 - `schedule`: 每小时第 `07` 分和 `37` 分执行
-- `workflow_dispatch`: 支持手动执行
+- `workflow_dispatch`: 支持手动执行，刷新 `xiadown` 以外的清单
+
+`.github/workflows/refresh-xiadown.yml` 只支持 `workflow_dispatch`，用于手动刷新 `xiadown` 软件版本清单。
 
 Workflow 使用 GitHub Actions 自带的 `github.token` 读取上游 GitHub Release 元数据，并将生成结果提交回 `main`。

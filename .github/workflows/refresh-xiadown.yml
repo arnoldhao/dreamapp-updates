@@ -1,8 +1,6 @@
-name: Refresh Update Manifests
+name: Refresh Xiadown Update Manifest
 
 on:
-  schedule:
-    - cron: "7,37 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -13,7 +11,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  refresh:
+  refresh-xiadown:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -36,18 +34,18 @@ jobs:
       - name: Sync latest default branch
         run: git pull --rebase origin "${{ github.event.repository.default_branch }}"
 
-      - name: Build manifests
+      - name: Build xiadown manifest
         env:
           PUBLIC_BASE_URL: https://updates.dreamapp.cc
           GITHUB_TOKEN: ${{ github.token }}
-        run: npm run build:auto
+        run: npm run build:xiadown
 
-      - name: Commit refreshed manifests
+      - name: Commit refreshed xiadown manifest
         run: |
           git add dist
           if git diff --cached --quiet; then
-            echo "No manifest changes detected."
+            echo "No xiadown manifest changes detected."
             exit 0
           fi
-          git commit -m "chore: refresh update manifests"
+          git commit -m "chore: refresh xiadown update manifest"
           git push origin "HEAD:${{ github.event.repository.default_branch }}"
