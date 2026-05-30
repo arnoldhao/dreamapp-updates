@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.05.30.3",
+  "manifestVersion": "2026.05.30.4",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-30T03:59:57.386Z",
+  "updatedAt": "2026-05-30T04:16:59.669Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.3.2",
-        "publishedAt": "2026-05-26T13:33:55Z",
-        "notes": "## 版本变更 / Changelog\n\n- fix: output device switch and change icon (#18) by @arnoldhao\n  - Related #13 中文\n  - 更新应用图标资源，包括 macOS、Windows、前端 app icon 和 Windows tray icon。\n  - 修复 macOS 均衡器切换输出设备时的处理逻辑，提升输出设备切换后的音频路由稳定性。\n  - 降低 Listen / Muse 视频模式的 CPU 占用，避免 YouTube Music 视频模式下持续逐帧执行 DOM enforcement。\n  - 将播放器媒体模式扩展为 cover / lyrics / video，让视频模式和歌词模式都能跨歌曲保持用户意图；无视频或无歌词歌曲不会清掉当前模式。\n  - 修复 Muse 播放中进入缓冲时，播放状态被错误同步为暂停的问题，避免播放按钮从暂停变成播放图标。\n  - 增加回归测试覆盖 Muse buffering 状态同步。\n  - English\n  - Refresh app icon assets, including macOS, Windows, frontend app icons, and the Windows tray icon.\n  - Fix macOS equalizer output device switching to improve audio routing stability after output changes.\n  - Reduce CPU usage in Listen / Muse video mode by avoiding continuous per-frame DOM enforcement in the YouTube Music video view.\n  - Extend player media mode to cover / lyrics / video, preserving video and lyrics mode intent across tracks; tracks without video or lyrics no longer clear the selected mode.\n  - Fix Muse playback state syncing during buffering so active playback is not incorrectly downgraded to paused, preventing the play button from switching from pause to play.\n  - Add regression coverage for Muse buffering state synchronization.",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.3.2",
+        "version": "0.3.4",
+        "publishedAt": "2026-05-30T04:15:51Z",
+        "notes": "## Changelog\n\n### Other\n- docs: refresh README presentation (#19) by @arnoldhao\n- ci: gate release publishing on notarized builds (#21) by @arnoldhao\n  - Gate release publication on successful signed builds\n- ci: fix macos signing keychain import (#22) by @arnoldhao\n- feat: split sniff (#23) by @arnoldhao\n  - related #20\n- fix: Allow unsigned macOS app update migration (#24) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.3.4",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.3.2.zip",
+            "artifactName": "xiadown-macos-arm64-0.3.4.zip",
             "contentType": "application/zip",
-            "size": 18256658,
-            "sha256": "8e67f08da81828ccbb5d446374d70dcbc7d3212bd17972a05d4e0485871025d6",
+            "size": 18260528,
+            "sha256": "032fab2f594a4a04ee837950a5cfd399f35fe47798c97b996dd3d9e3e0a725bb",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.2/xiadown-macos-arm64-0.3.2.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.4/xiadown-macos-arm64-0.3.4.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.2/xiadown-macos-arm64-0.3.2.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.4/xiadown-macos-arm64-0.3.4.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.3.2.zip",
+            "artifactName": "xiadown-macos-x64-0.3.4.zip",
             "contentType": "application/zip",
-            "size": 19327300,
-            "sha256": "26e026013732315587b681b32ccaea51abd06e8f8c396e608e5197c1cd46cb8f",
+            "size": 19337407,
+            "sha256": "4f93b1479c235ba2e36c66573cc306d634d3f781d9b43f81128349a6eed5cb33",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.2/xiadown-macos-x64-0.3.2.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.4/xiadown-macos-x64-0.3.4.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.2/xiadown-macos-x64-0.3.2.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.4/xiadown-macos-x64-0.3.4.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.3.2-installer.exe",
-            "contentType": "application/x-msdos-program",
-            "size": 19902338,
-            "sha256": "a5742a2fe1cd1e76fd6fb9b9941966a1b0e1362d9b195f7f91a7eb166fc91586",
+            "artifactName": "xiadown-windows-x64-0.3.4-installer.exe",
+            "contentType": "application/octet-stream",
+            "size": 19910317,
+            "sha256": "3fb4b6ee27ab868f3b40f92e777116f9c8171912450438381d97cae08a73706c",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.2/xiadown-windows-x64-0.3.2-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.4/xiadown-windows-x64-0.3.4-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.2/xiadown-windows-x64-0.3.2-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.4/xiadown-windows-x64-0.3.4-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "4a56ab5428f967219648ed94466800e4be6d7733"
+  "sourceRevision": "9dd5483fc090b929c33b69bb6726c0ca5346c931"
 }
