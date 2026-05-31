@@ -36,6 +36,20 @@ export default {
         },
         downloadAliases: [
           {
+            route: "downloads/xiadown-macos-arm64-{version}.dmg",
+            asset: {
+              name: "xiadown-macos-arm64-{version}.dmg",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/xiadown-macos-x64-{version}.dmg",
+            asset: {
+              name: "xiadown-macos-x64-{version}.dmg",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
             route: "downloads/xiadown-macos-arm64-latest.zip",
             asset: {
               name: "xiadown-macos-arm64-{version}.zip",
@@ -43,9 +57,23 @@ export default {
             sourceName: "gh-proxy",
           },
           {
+            route: "downloads/xiadown-macos-arm64-latest.dmg",
+            asset: {
+              name: "xiadown-macos-arm64-{version}.dmg",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
             route: "downloads/xiadown-macos-x64-latest.zip",
             asset: {
               name: "xiadown-macos-x64-{version}.zip",
+            },
+            sourceName: "gh-proxy",
+          },
+          {
+            route: "downloads/xiadown-macos-x64-latest.dmg",
+            asset: {
+              name: "xiadown-macos-x64-{version}.dmg",
             },
             sourceName: "gh-proxy",
           },

@@ -20,7 +20,9 @@
 - `/hush/downloads/hush-windows-x64-latest-setup.exe`
 - `/xiadown/manifest.json`
 - `/xiadown/downloads/xiadown-macos-arm64-latest.zip`
+- `/xiadown/downloads/xiadown-macos-arm64-latest.dmg`
 - `/xiadown/downloads/xiadown-macos-x64-latest.zip`
+- `/xiadown/downloads/xiadown-macos-x64-latest.dmg`
 - `/xiadown/downloads/xiadown-windows-x64-latest-installer.exe`
 - `/xiadown/downloads/xiadown-windows-x64-latest.zip`
 - `/index.json`
