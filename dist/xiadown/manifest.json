@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.05.31.6",
+  "manifestVersion": "2026.06.02.7",
   "defaultChannel": "stable",
-  "updatedAt": "2026-05-31T16:12:28.483Z",
+  "updatedAt": "2026-06-02T02:24:03.712Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.3.6",
-        "publishedAt": "2026-05-31T15:58:59Z",
-        "notes": "## Changelog\n\n### Other\n- chore: beautify macos dmg (#28) by @arnoldhao\n- feat: Display completed task file types (#29) by @arnoldhao\n- optimize: Tune listen artwork visualizer effects (#30) by @arnoldhao\n- fix: muse playback state recovery (#31) by @arnoldhao",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.3.6",
+        "version": "0.3.7",
+        "publishedAt": "2026-06-02T02:23:13Z",
+        "notes": "## Changelog\n\n### Other\n- feat: Add Windows WebView visualizer capture (#32) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.3.7",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.3.6.zip",
+            "artifactName": "xiadown-macos-arm64-0.3.7.zip",
             "contentType": "application/zip",
-            "size": 21074899,
-            "sha256": "39fb4e982aeef9cb1cf0b12c7f5d349707426f69dc9e9e56ae6d11192bba7383",
+            "size": 21077198,
+            "sha256": "b41f58738ace10642d93c319ab28a15264fc217a6abd597db4af4775c58fad74",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.6/xiadown-macos-arm64-0.3.6.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.7/xiadown-macos-arm64-0.3.7.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.6/xiadown-macos-arm64-0.3.6.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.7/xiadown-macos-arm64-0.3.7.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.3.6.zip",
+            "artifactName": "xiadown-macos-x64-0.3.7.zip",
             "contentType": "application/zip",
-            "size": 22177242,
-            "sha256": "cb87e1bc464f417e8003e270ff1bf5877e34054a7d15490cab2d9a0eb9022284",
+            "size": 22178340,
+            "sha256": "3b9ce98c74678346bfdbe63500bdbfaf3f276a7e8b6a52490affb546aa6a0cc6",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.6/xiadown-macos-x64-0.3.6.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.7/xiadown-macos-x64-0.3.7.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.6/xiadown-macos-x64-0.3.6.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.7/xiadown-macos-x64-0.3.7.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.3.6-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.3.7-installer.exe",
             "contentType": "application/octet-stream",
-            "size": 22723129,
-            "sha256": "1458e838d88fa6c1d06ddff22c1f2f0229d33a1c9b31d192b6b0bd9bdbc576ee",
+            "size": 22740833,
+            "sha256": "9cb72adecdda5fef850225fb60e550097c01192eb8c7fe40c68bccc780278ffd",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.6/xiadown-windows-x64-0.3.6-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.3.7/xiadown-windows-x64-0.3.7-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.6/xiadown-windows-x64-0.3.6-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.3.7/xiadown-windows-x64-0.3.7-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "98a68a8017f66d04158d8e829f85212e0ac2ffff"
+  "sourceRevision": "34e83b0a3da484a318298d90de536d6e3cdf8fe3"
 }
