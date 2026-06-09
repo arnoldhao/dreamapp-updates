@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.dreamcreator",
-  "manifestVersion": "2026.06.09.1847",
+  "manifestVersion": "2026.06.09.1848",
   "defaultChannel": "stable",
-  "updatedAt": "2026-06-09T22:41:27.481Z",
+  "updatedAt": "2026-06-09T23:38:46.660Z",
   "channels": {
     "stable": {
       "app": {
@@ -100,7 +100,7 @@
             "owner": "yt-dlp",
             "repo": "yt-dlp"
           },
-          "upstreamVersion": "2026.03.17",
+          "upstreamVersion": "2026.06.09",
           "recommendedVersion": "2026.03.17",
           "publishedAt": "2026-03-17T23:42:33Z",
           "autoUpdate": true,
@@ -401,5 +401,5 @@
       }
     }
   },
-  "sourceRevision": "3410ca3ccc0b24a19af1281bb919fb5a0467563b"
+  "sourceRevision": "32a0c860d6f9a8598d1e90071cba07f8f79717a8"
 }
