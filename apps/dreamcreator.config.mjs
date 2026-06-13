@@ -29,6 +29,11 @@ const ytDlpSource = {
   versionPrefixes: [],
 };
 
+const ytDlpLatestStableSelector = {
+  type: "latest",
+  prerelease: false,
+};
+
 const ffmpegSource = {
   provider: "github-release",
   owner: "jellyfin",
@@ -133,18 +138,12 @@ export default {
           kind: "external-tool",
           source: ytDlpSource,
           upstream: {
-            selector: {
-              type: "latest",
-              prerelease: false,
-            },
+            selector: ytDlpLatestStableSelector,
           },
           recommended: {
-            selector: {
-              type: "tag",
-              tag: "2026.03.17",
-            },
+            selector: ytDlpLatestStableSelector,
           },
-          notes: "Pinned to a validated release for the stable channel.",
+          notes: "Follows the latest stable upstream release.",
           autoUpdate: true,
           required: true,
           compatibility: {
