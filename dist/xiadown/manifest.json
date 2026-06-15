@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.06.13.1903",
+  "manifestVersion": "2026.06.15.13",
   "defaultChannel": "stable",
-  "updatedAt": "2026-06-13T02:36:28.975Z",
+  "updatedAt": "2026-06-15T17:26:51.144Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.4.4",
-        "publishedAt": "2026-06-13T01:30:50Z",
-        "notes": "## Changelog\n\n### Other\n- fix: handle bilibili app session membership (#41) by @arnoldhao",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.4.4",
+        "version": "0.4.5",
+        "publishedAt": "2026-06-15T17:13:58Z",
+        "notes": "## Changelog\n\n### Other\n- fix: decouple app session cookie save and verification (#43) by @arnoldhao\n  - 中文: 登录 WebView 关闭后先保存 cookies，再异步验证账号状态；修正验证超时、状态推送和窗口关闭并发收尾。\n  - English: Save app session cookies before asynchronous account verification; fix verification timeout updates, status events, and WebView close finalization concurrency.",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.4.5",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.4.4.zip",
+            "artifactName": "xiadown-macos-arm64-0.4.5.zip",
             "contentType": "application/zip",
-            "size": 21114410,
-            "sha256": "d1829bbc55b3c8792f49f49d7a18b11556779d585e658d92b94db0e57caea472",
+            "size": 21122497,
+            "sha256": "f7d1c17011d3acd090ea3e285a1c42fd868db1c4918e0808758804a7b1e2b044",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.4/xiadown-macos-arm64-0.4.4.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-arm64-0.4.5.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.4/xiadown-macos-arm64-0.4.4.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-arm64-0.4.5.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.4.4.zip",
+            "artifactName": "xiadown-macos-x64-0.4.5.zip",
             "contentType": "application/zip",
-            "size": 22215104,
-            "sha256": "60a2722c48fce722e784baf6e2a9dd182cc80e567ce97ec935a14134ccceeed4",
+            "size": 22223133,
+            "sha256": "dd2cbad78453559168b2c27e80c87c92d1ff29770eff555f1d404672c98224da",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.4/xiadown-macos-x64-0.4.4.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-x64-0.4.5.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.4/xiadown-macos-x64-0.4.4.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-x64-0.4.5.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.4.4-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.4.5-installer.exe",
             "contentType": "application/octet-stream",
-            "size": 22791484,
-            "sha256": "af20a58cd99d0cae6a9fc5edd20b8704623f039f4acfc00b426fb51e756010d3",
+            "size": 22803689,
+            "sha256": "478a50687958c2ca4ca455dac269a522c05146c7262b8db748c4bbe9371f5bd1",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.4/xiadown-windows-x64-0.4.4-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-windows-x64-0.4.5-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.4/xiadown-windows-x64-0.4.4-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-windows-x64-0.4.5-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "fb3a68f63091082966dd5bf06be204c6866dfc7e"
+  "sourceRevision": "f0b334ef6ed6344bb770779fb41ea50ac99b2479"
 }
