@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.dreamcreator",
-  "manifestVersion": "2026.06.19.2022",
+  "manifestVersion": "2026.06.19.2023",
   "defaultChannel": "stable",
-  "updatedAt": "2026-06-19T15:13:34.907Z",
+  "updatedAt": "2026-06-19T16:29:25.673Z",
   "channels": {
     "stable": {
       "app": {
@@ -401,5 +401,5 @@
       }
     }
   },
-  "sourceRevision": "668117939f95bad2c5e263ae37c549ef03303b8e"
+  "sourceRevision": "6d80606b4fa7da2b29d559d46e9865cb9248c35f"
 }
