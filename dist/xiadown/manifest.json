@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.06.15.13",
+  "manifestVersion": "2026.06.23.14",
   "defaultChannel": "stable",
-  "updatedAt": "2026-06-15T17:26:51.144Z",
+  "updatedAt": "2026-06-23T09:45:39.968Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.4.5",
-        "publishedAt": "2026-06-15T17:13:58Z",
-        "notes": "## Changelog\n\n### Other\n- fix: decouple app session cookie save and verification (#43) by @arnoldhao\n  - 中文: 登录 WebView 关闭后先保存 cookies，再异步验证账号状态；修正验证超时、状态推送和窗口关闭并发收尾。\n  - English: Save app session cookies before asynchronous account verification; fix verification timeout updates, status events, and WebView close finalization concurrency.",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.4.5",
+        "version": "0.4.6",
+        "publishedAt": "2026-06-23T08:25:25Z",
+        "notes": "## Changelog\n\n### Other\n- feat: Add missing file relink repair flow (#48) by @arnoldhao\n  - 修复失效文件重链流程\n  - Add missing file relink repair flow\n  - Resolve #45\n- feat: support extracted batch download urls (#50) by @arnoldhao\n  - 中文：支持从混合文本中提取下载链接，新增批量下载配置表格、每项应用会话/质量设置，并加入 yt-dlp 下载并发调度与设置项。\n  - English: Extract downloadable URLs from mixed text, add batch download item controls for session cookies and quality, and schedule yt-dlp jobs with configurable download concurrency.\n  - Related: #44\n- fix: fix relink folder picker (#51) by @arnoldhao\n  - 修复 Windows 下失效文件重选文件夹可能不弹出的问题。\n  - Fix missing-file relink folder picker not opening on Windows.",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.4.6",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.4.5.zip",
+            "artifactName": "xiadown-macos-arm64-0.4.6.zip",
             "contentType": "application/zip",
-            "size": 21122497,
-            "sha256": "f7d1c17011d3acd090ea3e285a1c42fd868db1c4918e0808758804a7b1e2b044",
+            "size": 21177934,
+            "sha256": "9cb11da36f7be56699cd79c37697c99ea296c69d3c6cd462bf9775963f8a0059",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-arm64-0.4.5.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-arm64-0.4.6.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-arm64-0.4.5.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-arm64-0.4.6.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.4.5.zip",
+            "artifactName": "xiadown-macos-x64-0.4.6.zip",
             "contentType": "application/zip",
-            "size": 22223133,
-            "sha256": "dd2cbad78453559168b2c27e80c87c92d1ff29770eff555f1d404672c98224da",
+            "size": 22284936,
+            "sha256": "8cb670558442ddea5e41b4396f4a09a076813bacd39bf33ff0b3f887cf1913b1",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-x64-0.4.5.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-x64-0.4.6.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-macos-x64-0.4.5.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-x64-0.4.6.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.4.5-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.4.6-installer.exe",
             "contentType": "application/octet-stream",
-            "size": 22803689,
-            "sha256": "478a50687958c2ca4ca455dac269a522c05146c7262b8db748c4bbe9371f5bd1",
+            "size": 22861322,
+            "sha256": "c686e7c86fd9411458a256c91c4d27a7ba7fb5f640926058972afb15f3365b96",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-windows-x64-0.4.5-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-windows-x64-0.4.6-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.5/xiadown-windows-x64-0.4.5-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-windows-x64-0.4.6-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "f0b334ef6ed6344bb770779fb41ea50ac99b2479"
+  "sourceRevision": "7b8e8b30985737c5d4881d20a05410868f98da17"
 }
