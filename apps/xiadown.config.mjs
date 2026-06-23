@@ -9,9 +9,9 @@ const xiadownSource = {
 
 const dreamFmLiveChannel = {
   schemaVersion: 1,
-  url: "https://updates.dreamapp.cc/xiadown/dream.fm/live/2026.05.26.1/channel.json",
-  version: "2026.05.26.1",
-  updatedAt: "2026-05-26T09:41:13.000Z",
+  url: "https://updates.dreamapp.cc/xiadown/dream.fm/live/2026.06.23.1/channel.json",
+  version: "2026.06.23.1",
+  updatedAt: "2026-06-23T08:19:25.000Z",
   minAppVersion: "0.0.1",
   ttlSeconds: 300,
   fallback: "embedded",

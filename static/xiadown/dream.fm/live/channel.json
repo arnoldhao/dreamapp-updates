@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "dreamfm.live.channel",
-  "version": "2026.05.26.1",
-  "updatedAt": "2026-05-26T09:41:13.000Z",
+  "version": "2026.06.23.1",
+  "updatedAt": "2026-06-23T08:19:25.000Z",
   "ttlSeconds": 300,
   "groups": [
     {
@@ -28,15 +28,15 @@
           "id": "live-claude-fm",
           "group": "live",
           "source": "youtube_music",
-          "videoId": "YmQ7jRgf4f0",
+          "videoId": "tRsQsTMvPNg",
           "title": "Claude FM 🎵",
           "channel": "Claude",
           "description": "music for thinking and building",
           "durationLabel": "LIVE",
-          "thumbnailUrl": "https://i.ytimg.com/vi/YmQ7jRgf4f0/maxresdefault.jpg",
+          "thumbnailUrl": "https://i.ytimg.com/vi/tRsQsTMvPNg/maxresdefault.jpg",
           "playback": {
             "kind": "youtube_music",
-            "videoId": "YmQ7jRgf4f0"
+            "videoId": "tRsQsTMvPNg"
           }
         },
         {
