@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.06.23.14",
+  "manifestVersion": "2026.06.29.15",
   "defaultChannel": "stable",
-  "updatedAt": "2026-06-23T09:45:39.968Z",
+  "updatedAt": "2026-06-29T13:32:24.767Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.4.6",
-        "publishedAt": "2026-06-23T08:25:25Z",
-        "notes": "## Changelog\n\n### Other\n- feat: Add missing file relink repair flow (#48) by @arnoldhao\n  - 修复失效文件重链流程\n  - Add missing file relink repair flow\n  - Resolve #45\n- feat: support extracted batch download urls (#50) by @arnoldhao\n  - 中文：支持从混合文本中提取下载链接，新增批量下载配置表格、每项应用会话/质量设置，并加入 yt-dlp 下载并发调度与设置项。\n  - English: Extract downloadable URLs from mixed text, add batch download item controls for session cookies and quality, and schedule yt-dlp jobs with configurable download concurrency.\n  - Related: #44\n- fix: fix relink folder picker (#51) by @arnoldhao\n  - 修复 Windows 下失效文件重选文件夹可能不弹出的问题。\n  - Fix missing-file relink folder picker not opening on Windows.",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.4.6",
+        "version": "0.4.7",
+        "publishedAt": "2026-06-29T13:03:38Z",
+        "notes": "## Changelog\n\n### Other\n- chore: 更新 README / update READMEs (#52) by @arnoldhao\n  - add homebrew\n- feat: improve ytdlp (#57) by @arnoldhao\n  - 快速下载 playlist 仅下载第一个视频；自定义解析 playlist 转为批量下载\n  - 自定义下载在纯视频流合并场景支持选择音轨，快速下载新增最高码率选项\n  - handle playlist downloads\n  - allow custom downloads to choose audio tracks for video-only formats, and add a max-bitrate quick download mode\n  - resolved #54 related #53\n- feat: 完善应用会话验证 / improve app session verification (#58) by @arnoldhao\n  - 为 TikTok、Instagram、X、Facebook、Vimeo、Twitch、Niconico 补齐账号信息获取与验证\n  - Add account fetching and verification for TikTok, Instagram, X, Facebook, Vimeo, Twitch, and Niconico\n  - Resolve #53",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.4.7",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.4.6.zip",
+            "artifactName": "xiadown-macos-arm64-0.4.7.zip",
             "contentType": "application/zip",
-            "size": 21177934,
-            "sha256": "9cb11da36f7be56699cd79c37697c99ea296c69d3c6cd462bf9775963f8a0059",
+            "size": 21234756,
+            "sha256": "c8e2f6d5c91b425f914394c9f1cefcf873783f4c24d9ab7ef8995df0416a8ac7",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-arm64-0.4.6.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-arm64-0.4.7.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-arm64-0.4.6.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-arm64-0.4.7.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.4.6.zip",
+            "artifactName": "xiadown-macos-x64-0.4.7.zip",
             "contentType": "application/zip",
-            "size": 22284936,
-            "sha256": "8cb670558442ddea5e41b4396f4a09a076813bacd39bf33ff0b3f887cf1913b1",
+            "size": 22348561,
+            "sha256": "c7efc2145a7f4fe85382dd1c33c8c184a86e0381b81919b09a13bada3685430f",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-x64-0.4.6.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-x64-0.4.7.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-macos-x64-0.4.6.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-x64-0.4.7.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,22 +66,22 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.4.6-installer.exe",
+            "artifactName": "xiadown-windows-x64-0.4.7-installer.exe",
             "contentType": "application/octet-stream",
-            "size": 22861322,
-            "sha256": "c686e7c86fd9411458a256c91c4d27a7ba7fb5f640926058972afb15f3365b96",
+            "size": 22920043,
+            "sha256": "dd4c655a38c4e71fed4564a1b114b599ab5c4051f8feb58b21d6985d39bca9af",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-windows-x64-0.4.6-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-windows-x64-0.4.7-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.6/xiadown-windows-x64-0.4.6-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-windows-x64-0.4.7-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
@@ -412,5 +412,5 @@
       }
     }
   },
-  "sourceRevision": "7b8e8b30985737c5d4881d20a05410868f98da17"
+  "sourceRevision": "b7ad519d347eb8098dfb5fa21dfd123c586af77b"
 }
