@@ -296,41 +296,64 @@ async function buildPlatformEntries({ platformConfigs, release, version, default
 
   const platformEntries = {};
   for (const [platformKey, platformConfig] of Object.entries(platformConfigs)) {
-    const asset = findAsset(release.assets, platformConfig.asset, {
-      version,
-      tag: release.tag_name,
-    });
-    const sha256 = extractSha256(asset);
-    assert(isHexSha256(sha256), `asset ${asset.name} has invalid sha256`);
-
-    const entry = {
-      artifactName: asset.name,
-      contentType: asset.content_type || "application/octet-stream",
-      size: asset.size,
-      sha256,
-      sources: buildDownloadSources(
-        platformConfig.downloadSources ?? defaults.downloadSources,
-        asset.browser_download_url,
-      ),
-    };
-
-    if (platformConfig.install?.strategy) {
-      entry.installStrategy = platformConfig.install.strategy;
-    }
-    if (platformConfig.install?.artifactType) {
-      entry.artifactType = platformConfig.install.artifactType;
-    }
-    if (platformConfig.install?.executableName) {
-      entry.executableName = platformConfig.install.executableName;
-    }
-    if (Array.isArray(platformConfig.install?.binaries) && platformConfig.install.binaries.length > 0) {
-      entry.binaries = platformConfig.install.binaries;
+    const entry = buildPlatformArtifact({ platformConfig, release, version, defaults });
+    const variantConfigs = platformConfig.variants ?? {};
+    assert(
+      variantConfigs && typeof variantConfigs === "object" && !Array.isArray(variantConfigs),
+      `platform ${platformKey} variants must be an object`,
+    );
+    if (Object.keys(variantConfigs).length > 0) {
+      entry.variants = {};
+      for (const [variantName, variantConfig] of Object.entries(variantConfigs)) {
+        assert(/^[a-z][a-z0-9-]*$/.test(variantName), `platform ${platformKey} has invalid variant name ${variantName}`);
+        entry.variants[variantName] = buildPlatformArtifact({
+          platformConfig: variantConfig,
+          release,
+          version,
+          defaults,
+        });
+      }
     }
 
     platformEntries[platformKey] = entry;
   }
 
   return platformEntries;
+}
+
+function buildPlatformArtifact({ platformConfig, release, version, defaults }) {
+  const asset = findAsset(release.assets, platformConfig.asset, {
+    version,
+    tag: release.tag_name,
+  });
+  const sha256 = extractSha256(asset);
+  assert(isHexSha256(sha256), `asset ${asset.name} has invalid sha256`);
+
+  const entry = {
+    artifactName: asset.name,
+    contentType: asset.content_type || "application/octet-stream",
+    size: asset.size,
+    sha256,
+    sources: buildDownloadSources(
+      platformConfig.downloadSources ?? defaults.downloadSources,
+      asset.browser_download_url,
+    ),
+  };
+
+  if (platformConfig.install?.strategy) {
+    entry.installStrategy = platformConfig.install.strategy;
+  }
+  if (platformConfig.install?.artifactType) {
+    entry.artifactType = platformConfig.install.artifactType;
+  }
+  if (platformConfig.install?.executableName) {
+    entry.executableName = platformConfig.install.executableName;
+  }
+  if (Array.isArray(platformConfig.install?.binaries) && platformConfig.install.binaries.length > 0) {
+    entry.binaries = platformConfig.install.binaries;
+  }
+
+  return entry;
 }
 
 async function resolveRelease(client, sourceConfig, selector) {
@@ -438,8 +461,18 @@ function validatePlatforms(platforms, label, { required = true } = {}) {
   }
 
   for (const [platformKey, platform] of Object.entries(platforms)) {
-    assert(platform.artifactName, `${label}.${platformKey} artifactName is required`);
-    assert(platform.sources?.length > 0, `${label}.${platformKey} sources are required`);
-    assert(isHexSha256(platform.sha256), `${label}.${platformKey} sha256 is invalid`);
+    validatePlatformArtifact(platform, `${label}.${platformKey}`);
+  }
+}
+
+function validatePlatformArtifact(platform, label) {
+  assert(platform.artifactName, `${label} artifactName is required`);
+  assert(platform.sources?.length > 0, `${label} sources are required`);
+  assert(isHexSha256(platform.sha256), `${label} sha256 is invalid`);
+  const variants = platform.variants ?? {};
+  assert(variants && typeof variants === "object" && !Array.isArray(variants), `${label} variants must be an object`);
+  for (const [variantName, variant] of Object.entries(variants)) {
+    assert(/^[a-z][a-z0-9-]*$/.test(variantName), `${label} has invalid variant name ${variantName}`);
+    validatePlatformArtifact(variant, `${label}.variants.${variantName}`);
   }
 }

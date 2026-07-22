@@ -246,6 +246,15 @@
           "items": {
             "$ref": "#/$defs/downloadSource"
           }
+        },
+        "variants": {
+          "type": "object",
+          "propertyNames": {
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/platformArtifact"
+          }
         }
       }
     },

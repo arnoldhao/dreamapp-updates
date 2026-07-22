@@ -119,6 +119,17 @@ export default {
               strategy: "app-installer",
               artifactType: "exe",
             },
+            variants: {
+              portable: {
+                asset: {
+                  name: "xiadown-windows-x64-{version}.zip",
+                },
+                install: {
+                  strategy: "archive",
+                  artifactType: "zip",
+                },
+              },
+            },
           },
         },
       },

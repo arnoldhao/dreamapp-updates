@@ -6,6 +6,7 @@
     "node": ">=22"
   },
   "scripts": {
+    "test": "node --test scripts/lib/*.test.mjs",
     "build": "node scripts/build.mjs",
     "build:auto": "node scripts/build.mjs --exclude-app xiadown,hush",
     "build:dreamcreator": "node scripts/build.mjs --app dreamcreator",

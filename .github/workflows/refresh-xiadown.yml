@@ -34,6 +34,9 @@ jobs:
       - name: Sync latest default branch
         run: git pull --rebase origin "${{ github.event.repository.default_branch }}"
 
+      - name: Test manifest generator
+        run: npm test
+
       - name: Build xiadown manifest
         env:
           PUBLIC_BASE_URL: https://updates.dreamapp.cc
