@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.06.29.15",
+  "manifestVersion": "2026.07.23.16",
   "defaultChannel": "stable",
-  "updatedAt": "2026-06-29T13:32:24.767Z",
+  "updatedAt": "2026-07-23T05:47:56.420Z",
   "channels": {
     "stable": {
       "app": {
@@ -12,28 +12,28 @@
           "owner": "arnoldhao",
           "repo": "xiadown"
         },
-        "version": "0.4.7",
-        "publishedAt": "2026-06-29T13:03:38Z",
-        "notes": "## Changelog\n\n### Other\n- chore: 更新 README / update READMEs (#52) by @arnoldhao\n  - add homebrew\n- feat: improve ytdlp (#57) by @arnoldhao\n  - 快速下载 playlist 仅下载第一个视频；自定义解析 playlist 转为批量下载\n  - 自定义下载在纯视频流合并场景支持选择音轨，快速下载新增最高码率选项\n  - handle playlist downloads\n  - allow custom downloads to choose audio tracks for video-only formats, and add a max-bitrate quick download mode\n  - resolved #54 related #53\n- feat: 完善应用会话验证 / improve app session verification (#58) by @arnoldhao\n  - 为 TikTok、Instagram、X、Facebook、Vimeo、Twitch、Niconico 补齐账号信息获取与验证\n  - Add account fetching and verification for TikTok, Instagram, X, Facebook, Vimeo, Twitch, and Niconico\n  - Resolve #53",
-        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v0.4.7",
+        "version": "1.0.0",
+        "publishedAt": "2026-07-23T02:53:31Z",
+        "notes": "## Changelog\n\n### Breaking Changes\n- breaking: workspace (#66) by @arnoldhao\n  - 中文\n  - 概览\n  - XiaDown 1.0.0 是一次面向本地优先媒体管理的重大版本更新。应用从以下载和转码任务为中心的界面，升级为由资源库、音乐、嗅探、RSS 和 YouTube 组成的统一工作区，同时重构了数据模型、播放系统、网络边界和跨平台发布流程。\n  - 主要更新\n  - 全新工作区\n  - 新增统一工作区，可在资源库、音乐、嗅探、RSS 和 YouTube 之间快速切换。\n\n### Other\n- chore: 添加使用文档入口 / Add user guide links (#63) by @arnoldhao",
+        "releasePage": "https://github.com/arnoldhao/xiadown/releases/tag/v1.0.0",
         "platforms": {
           "darwin-arm64": {
-            "artifactName": "xiadown-macos-arm64-0.4.7.zip",
+            "artifactName": "xiadown-macos-arm64-1.0.0.zip",
             "contentType": "application/zip",
-            "size": 21234756,
-            "sha256": "c8e2f6d5c91b425f914394c9f1cefcf873783f4c24d9ab7ef8995df0416a8ac7",
+            "size": 21447855,
+            "sha256": "b8aeb5949702b2454b5533685eca7b60b60cfd3138844735e6d64f8ce5737589",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-arm64-0.4.7.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-macos-arm64-1.0.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-arm64-0.4.7.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-macos-arm64-1.0.0.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -42,22 +42,22 @@
             "artifactType": "zip"
           },
           "darwin-amd64": {
-            "artifactName": "xiadown-macos-x64-0.4.7.zip",
+            "artifactName": "xiadown-macos-x64-1.0.0.zip",
             "contentType": "application/zip",
-            "size": 22348561,
-            "sha256": "c7efc2145a7f4fe85382dd1c33c8c184a86e0381b81919b09a13bada3685430f",
+            "size": 22844627,
+            "sha256": "4a526697149e84050952a9fc2a61a6a967d7a819406b302379ade3ff8376e6e6",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-x64-0.4.7.zip",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-macos-x64-1.0.0.zip",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-macos-x64-0.4.7.zip",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-macos-x64-1.0.0.zip",
                 "priority": 20,
                 "enabled": true
               }
@@ -66,28 +66,54 @@
             "artifactType": "zip"
           },
           "windows-amd64": {
-            "artifactName": "xiadown-windows-x64-0.4.7-installer.exe",
+            "artifactName": "xiadown-windows-x64-1.0.0-installer.exe",
             "contentType": "application/octet-stream",
-            "size": 22920043,
-            "sha256": "dd4c655a38c4e71fed4564a1b114b599ab5c4051f8feb58b21d6985d39bca9af",
+            "size": 23489966,
+            "sha256": "60cb969860417af0efce07e2bacc990c791b0675a25065ca82d286074cb19305",
             "sources": [
               {
                 "name": "gh-proxy",
                 "kind": "proxy",
-                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-windows-x64-0.4.7-installer.exe",
+                "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-windows-x64-1.0.0-installer.exe",
                 "priority": 10,
                 "enabled": true
               },
               {
                 "name": "github",
                 "kind": "origin",
-                "url": "https://github.com/arnoldhao/xiadown/releases/download/v0.4.7/xiadown-windows-x64-0.4.7-installer.exe",
+                "url": "https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-windows-x64-1.0.0-installer.exe",
                 "priority": 20,
                 "enabled": true
               }
             ],
             "installStrategy": "app-installer",
-            "artifactType": "exe"
+            "artifactType": "exe",
+            "variants": {
+              "portable": {
+                "artifactName": "xiadown-windows-x64-1.0.0.zip",
+                "contentType": "application/zip",
+                "size": 21857359,
+                "sha256": "18ef89709b25c5b58dd04fa3de1e2e603508a5acdbe159de4eb4979b94a2c514",
+                "sources": [
+                  {
+                    "name": "gh-proxy",
+                    "kind": "proxy",
+                    "url": "https://gh-proxy.com/https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-windows-x64-1.0.0.zip",
+                    "priority": 10,
+                    "enabled": true
+                  },
+                  {
+                    "name": "github",
+                    "kind": "origin",
+                    "url": "https://github.com/arnoldhao/xiadown/releases/download/v1.0.0/xiadown-windows-x64-1.0.0.zip",
+                    "priority": 20,
+                    "enabled": true
+                  }
+                ],
+                "installStrategy": "archive",
+                "artifactType": "zip"
+              }
+            }
           }
         }
       },
@@ -100,13 +126,13 @@
             "owner": "yt-dlp",
             "repo": "yt-dlp"
           },
-          "upstreamVersion": "2026.06.09",
-          "recommendedVersion": "2026.06.09",
-          "publishedAt": "2026-06-09T23:26:57Z",
+          "upstreamVersion": "2026.07.04",
+          "recommendedVersion": "2026.07.04",
+          "publishedAt": "2026-07-04T22:41:44Z",
           "autoUpdate": true,
           "required": true,
           "notes": "Follows the latest stable upstream release.",
-          "releasePage": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.06.09",
+          "releasePage": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.07.04",
           "compatibility": {
             "minAppVersion": "1.0.0",
             "maxAppVersion": null
@@ -115,20 +141,20 @@
             "darwin-arm64": {
               "artifactName": "yt-dlp_macos",
               "contentType": "application/octet-stream",
-              "size": 36478448,
-              "sha256": "b82c3626952e6c14eaf654cc565866775ffd0b9ffb7021628ac59b42c2f4f244",
+              "size": 38256544,
+              "sha256": "498bd0dae17855c599d371d68ec5bafc439a9d8640e838be25c765a9792f261b",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_macos",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_macos",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
                   "priority": 20,
                   "enabled": true
                 }
@@ -140,20 +166,20 @@
             "darwin-amd64": {
               "artifactName": "yt-dlp_macos",
               "contentType": "application/octet-stream",
-              "size": 36478448,
-              "sha256": "b82c3626952e6c14eaf654cc565866775ffd0b9ffb7021628ac59b42c2f4f244",
+              "size": 38256544,
+              "sha256": "498bd0dae17855c599d371d68ec5bafc439a9d8640e838be25c765a9792f261b",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_macos",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_macos",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
                   "priority": 20,
                   "enabled": true
                 }
@@ -165,20 +191,20 @@
             "windows-amd64": {
               "artifactName": "yt-dlp.exe",
               "contentType": "application/octet-stream",
-              "size": 18202192,
-              "sha256": "3a48cb955d55c8821b60ccbdbbc6f61bc958f2f3d3b7ad5eaf3d83a543293a27",
+              "size": 18226085,
+              "sha256": "52fe3c26dcf71fbdc85b528589020bb0b8e383155cfa81b64dd447bbe35e24b8",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp.exe",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp.exe",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp.exe",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp.exe",
                   "priority": 20,
                   "enabled": true
                 }
@@ -412,5 +438,5 @@
       }
     }
   },
-  "sourceRevision": "b7ad519d347eb8098dfb5fa21dfd123c586af77b"
+  "sourceRevision": "d3ca803231e976e7dab9674a22fccf8abaf2ed02"
 }
