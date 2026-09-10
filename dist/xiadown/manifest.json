@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.07.27.20",
+  "manifestVersion": "2026.09.10.3314",
   "defaultChannel": "stable",
-  "updatedAt": "2026-07-27T09:13:15.932Z",
+  "updatedAt": "2026-09-10T01:21:15.669Z",
   "channels": {
     "stable": {
       "app": {
@@ -126,13 +126,13 @@
             "owner": "yt-dlp",
             "repo": "yt-dlp"
           },
-          "upstreamVersion": "2026.07.04",
-          "recommendedVersion": "2026.07.04",
-          "publishedAt": "2026-07-04T22:41:44Z",
+          "upstreamVersion": "2026.08.19",
+          "recommendedVersion": "2026.08.19",
+          "publishedAt": "2026-08-19T23:48:43Z",
           "autoUpdate": true,
           "required": true,
           "notes": "Follows the latest stable upstream release.",
-          "releasePage": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.07.04",
+          "releasePage": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.08.19",
           "compatibility": {
             "minAppVersion": "1.0.0",
             "maxAppVersion": null
@@ -141,20 +141,20 @@
             "darwin-arm64": {
               "artifactName": "yt-dlp_macos",
               "contentType": "application/octet-stream",
-              "size": 38256544,
-              "sha256": "498bd0dae17855c599d371d68ec5bafc439a9d8640e838be25c765a9792f261b",
+              "size": 37146048,
+              "sha256": "0f192b7ec147ab6288885d6351d9ab67367640029b4377576ef46dd79cf7b202",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
                   "priority": 20,
                   "enabled": true
                 }
@@ -166,20 +166,20 @@
             "darwin-amd64": {
               "artifactName": "yt-dlp_macos",
               "contentType": "application/octet-stream",
-              "size": 38256544,
-              "sha256": "498bd0dae17855c599d371d68ec5bafc439a9d8640e838be25c765a9792f261b",
+              "size": 37146048,
+              "sha256": "0f192b7ec147ab6288885d6351d9ab67367640029b4377576ef46dd79cf7b202",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp_macos",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
                   "priority": 20,
                   "enabled": true
                 }
@@ -191,20 +191,20 @@
             "windows-amd64": {
               "artifactName": "yt-dlp.exe",
               "contentType": "application/octet-stream",
-              "size": 18226085,
-              "sha256": "52fe3c26dcf71fbdc85b528589020bb0b8e383155cfa81b64dd447bbe35e24b8",
+              "size": 17840399,
+              "sha256": "66674953fe251b89f4d08c5f0e35e0728679bd67ab3d7d05c0562af101dd3e7a",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp.exe",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.exe",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.07.04/yt-dlp.exe",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.exe",
                   "priority": 20,
                   "enabled": true
                 }
@@ -223,35 +223,35 @@
             "owner": "jellyfin",
             "repo": "jellyfin-ffmpeg"
           },
-          "upstreamVersion": "7.1.4-3",
-          "recommendedVersion": "7.1.3-5",
-          "publishedAt": "2026-04-05T16:03:50Z",
-          "autoUpdate": false,
+          "upstreamVersion": "8.1.2-4",
+          "recommendedVersion": "8.1.2-4",
+          "publishedAt": "2026-09-06T05:30:38Z",
+          "autoUpdate": true,
           "required": true,
-          "notes": "Manual review required before changing stable channel binaries.",
-          "releasePage": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/tag/v7.1.3-5",
+          "notes": "Follows the latest stable upstream release.",
+          "releasePage": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/tag/v8.1.2-4",
           "compatibility": {
             "minAppVersion": "1.0.0",
             "maxAppVersion": null
           },
           "platforms": {
             "darwin-arm64": {
-              "artifactName": "jellyfin-ffmpeg_7.1.3-5_portable_macarm64-gpl.tar.xz",
+              "artifactName": "jellyfin-ffmpeg_8.1.2-4_portable_macarm64-gpl.tar.xz",
               "contentType": "application/x-xz",
-              "size": 31068640,
-              "sha256": "d1c22355cc8c915b4b0f5c0c5dc776ef61e133f96cce738672344578b713b171",
+              "size": 32900188,
+              "sha256": "1362e5cd8399bb9d648f237b94fff86f864aa9b61a3f239cfcccd77f91bf2649",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_macarm64-gpl.tar.xz",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_macarm64-gpl.tar.xz",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_macarm64-gpl.tar.xz",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_macarm64-gpl.tar.xz",
                   "priority": 20,
                   "enabled": true
                 }
@@ -264,22 +264,22 @@
               ]
             },
             "darwin-amd64": {
-              "artifactName": "jellyfin-ffmpeg_7.1.3-5_portable_mac64-gpl.tar.xz",
+              "artifactName": "jellyfin-ffmpeg_8.1.2-4_portable_mac64-gpl.tar.xz",
               "contentType": "application/x-xz",
-              "size": 36594048,
-              "sha256": "f3ac6beb0ea27497ed88378b700a66d71d340c8f6ab3233427f12f2b64de3db6",
+              "size": 37845240,
+              "sha256": "d50d288cd321f12f506d91ef3c21cfdec34f160191a556d4da8fe73b3d1b22bd",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_mac64-gpl.tar.xz",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_mac64-gpl.tar.xz",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_mac64-gpl.tar.xz",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_mac64-gpl.tar.xz",
                   "priority": 20,
                   "enabled": true
                 }
@@ -292,22 +292,22 @@
               ]
             },
             "windows-amd64": {
-              "artifactName": "jellyfin-ffmpeg_7.1.3-5_portable_win64-clang-gpl.zip",
+              "artifactName": "jellyfin-ffmpeg_8.1.2-4_portable_win64-clang-gpl.zip",
               "contentType": "application/zip",
-              "size": 60245199,
-              "sha256": "c9c10529a765bbd01e4cfb01c518634340f3e7d9f9364f759f1f3cefc49fb11e",
+              "size": 67806802,
+              "sha256": "a6821d72985ee6d5a8af16925b468d1c4ec1f652b582a0a2a5039282c26ffca5",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_win64-clang-gpl.zip",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_win64-clang-gpl.zip",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v7.1.3-5/jellyfin-ffmpeg_7.1.3-5_portable_win64-clang-gpl.zip",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_win64-clang-gpl.zip",
                   "priority": 20,
                   "enabled": true
                 }
@@ -438,5 +438,5 @@
       }
     }
   },
-  "sourceRevision": "30822982e7459a7cee990237048af05d4ff6ad5f"
+  "sourceRevision": "eb346e49c235ef7cf11c9c17f31b19200adaa85c"
 }
