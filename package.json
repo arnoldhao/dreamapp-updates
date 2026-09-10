@@ -8,7 +8,7 @@
   "scripts": {
     "test": "node --test scripts/lib/*.test.mjs",
     "build": "node scripts/build.mjs",
-    "build:auto": "node scripts/build.mjs --exclude-app xiadown,hush",
+    "build:auto": "node scripts/build.mjs --exclude-app hush --tools-only-app xiadown",
     "build:dreamcreator": "node scripts/build.mjs --app dreamcreator",
     "build:hush": "node scripts/build.mjs --app hush",
     "build:xiadown": "node scripts/build.mjs --app xiadown"

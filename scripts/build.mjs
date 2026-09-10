@@ -24,12 +24,18 @@ const runNumber = String(process.env.GITHUB_RUN_NUMBER || "1");
 const allAppConfigs = await loadAppConfigs(appsDir);
 const appConfigs = selectAppConfigs(allAppConfigs, options);
 assert(appConfigs.length > 0, "no app configs matched the requested filter");
+for (const appName of options.toolsOnlyApps) {
+  assert(appConfigs.some((app) => app.name === appName), `tools-only app is unknown or excluded: ${appName}`);
+}
 const scopedBuild = Boolean(options.app) || options.excludeApps.length > 0;
 const selectedAppNames = new Set(appConfigs.map((app) => app.name));
 const preservedAppConfigs = scopedBuild
   ? allAppConfigs.filter((app) => !selectedAppNames.has(app.name))
   : [];
 const previousBuilds = await loadExistingBuilds(distDir, allAppConfigs, publicBaseUrl);
+for (const appName of options.toolsOnlyApps) {
+  assert(previousBuilds.has(appName), `${appName}: tools-only refresh requires a previous manifest; publish the app manually first`);
+}
 const githubClient = new GitHubClient({ token: githubToken });
 
 await fs.rm(distDir, { recursive: true, force: true });
@@ -50,9 +56,11 @@ for (const app of appConfigs) {
       sourceRevision,
       runNumber,
       client: githubClient,
+      toolsOnly: options.toolsOnlyApps.includes(app.name),
+      previousBuild: previous,
     });
   } catch (error) {
-    if (!isReleaseIncompleteError(error) || !previous) {
+    if (options.toolsOnlyApps.includes(app.name) || !isReleaseIncompleteError(error) || !previous) {
       throw error;
     }
 
@@ -138,6 +146,7 @@ function parseArgs(argv) {
   const options = {
     app: "",
     excludeApps: [],
+    toolsOnlyApps: [],
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -151,6 +160,13 @@ function parseArgs(argv) {
         options.excludeApps.push(...parseAppList(argv[index + 1]));
         index += 1;
         break;
+      case "--tools-only-app": {
+        const appNames = parseAppList(argv[index + 1]);
+        assert(appNames.length > 0 && !appNames.some((name) => name.startsWith("--")), "--tools-only-app requires app names");
+        options.toolsOnlyApps.push(...appNames);
+        index += 1;
+        break;
+      }
       default:
         throw new Error(`unknown argument: ${current}`);
     }

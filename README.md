@@ -45,12 +45,16 @@
 
 ## GitHub Actions
 
-本仓库使用 `.github/workflows/deploy.yml` 定时刷新 `dist/` 中的清单文件，但不会自动检测 `hush` 和 `xiadown` 的软件版本。
+本仓库使用 `.github/workflows/deploy.yml` 定时刷新 `dist/` 中的清单文件。`dreamcreator` 全量刷新；`xiadown` 只刷新配置中 `autoUpdate: true` 的工具，`yt-dlp` 和 FFmpeg 均跟随上游最新稳定版；`hush` 保持原清单。
+
+`xiadown` 的 Bun 锁定在 `1.3.14`，定时工具刷新保留已发布的 Bun 内容。软件版本、下载地址和直播频道信息也保持已发布内容，软件版本仍通过手动 workflow 更新。
 
 默认行为：
 
 - `schedule`: 每小时第 `07` 分和 `37` 分执行
-- `workflow_dispatch`: 支持手动执行，刷新 `hush` 和 `xiadown` 以外的清单
+- `workflow_dispatch`: 支持手动执行，与定时任务使用相同的刷新范围
+
+定时任务运行 `npm run build:auto`（`node scripts/build.mjs --exclude-app hush --tools-only-app xiadown`）。单独刷新 XiaDown 自动更新工具可运行 `node scripts/build.mjs --app xiadown --tools-only-app xiadown`。工具刷新需要已有的 XiaDown 清单，首次发布必须手动运行完整刷新；若上游工具的安装包或 SHA-256 尚未齐全，则保留该工具上一版，等待下次检测。
 
 `.github/workflows/refresh-xiadown.yml` 只支持 `workflow_dispatch`，用于手动刷新 `xiadown` 软件版本清单。
 

@@ -133,7 +133,20 @@ export default {
           },
         },
       },
-      tools: dreamcreatorConfig.channels.stable.tools,
+      tools: {
+        ...dreamcreatorConfig.channels.stable.tools,
+        ffmpeg: {
+          ...dreamcreatorConfig.channels.stable.tools.ffmpeg,
+          recommended: {
+            selector: {
+              type: "latest",
+              prerelease: false,
+            },
+          },
+          notes: "Follows the latest stable upstream release.",
+          autoUpdate: true,
+        },
+      },
       listen: {
         liveChannel: dreamFmLiveChannel,
       },

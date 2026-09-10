@@ -24,8 +24,22 @@ export async function buildAppManifest({
   sourceRevision,
   runNumber,
   client,
+  toolsOnly = false,
+  previousBuild,
 }) {
   validateAppConfig(appConfig, appName);
+
+  if (toolsOnly) {
+    return buildAutoUpdateToolsManifest({
+      appConfig,
+      appName,
+      publicBaseUrl,
+      sourceRevision,
+      runNumber,
+      client: client ?? new GitHubClient({ token: githubToken }),
+      previousBuild,
+    });
+  }
 
   const updatedAt = new Date();
   const releaseClient = client ?? new GitHubClient({ token: githubToken });
@@ -93,6 +107,63 @@ export async function buildAppManifest({
     files,
     redirectsIncomplete,
     redirectWarnings,
+  };
+}
+
+async function buildAutoUpdateToolsManifest({
+  appConfig,
+  appName,
+  publicBaseUrl,
+  sourceRevision,
+  runNumber,
+  client,
+  previousBuild,
+}) {
+  assert(previousBuild?.manifest, `${appName}: tools-only refresh requires a previous manifest; publish the app manually first`);
+  assert(previousBuild.manifest.appId === appConfig.appId, `${appName}: previous manifest appId does not match config`);
+  validateManifest(previousBuild.manifest);
+
+  const manifest = structuredClone(previousBuild.manifest);
+  // Only touch already published channels. App releases and manually managed
+  // tools must stay exactly as they were approved, even if upstream has moved on.
+  for (const [channelName, channel] of Object.entries(manifest.channels)) {
+    const toolConfigs = appConfig.channels[channelName]?.tools ?? {};
+    for (const [toolName, toolConfig] of Object.entries(toolConfigs)) {
+      if (!toolConfig.autoUpdate) {
+        continue;
+      }
+      try {
+        channel.tools[toolName] = await buildToolReleaseEntry({
+          toolName,
+          toolConfig,
+          defaults: appConfig.defaults,
+          client,
+        });
+      } catch (error) {
+        if (!isReleaseIncompleteError(error) || !channel.tools[toolName]) {
+          throw new Error(`${appName}/${channelName}/${toolName}: ${error.message}`, { cause: error });
+        }
+        console.warn(
+          `[dreamapp-updates] reuse previous ${appName}/${channelName}/${toolName} because the latest release is incomplete: ${error.message}`,
+        );
+      }
+    }
+  }
+
+  const updatedAt = new Date();
+  manifest.manifestVersion = formatManifestVersion(updatedAt, runNumber);
+  manifest.updatedAt = updatedAt.toISOString();
+  if (sourceRevision) {
+    manifest.sourceRevision = sourceRevision;
+  } else {
+    delete manifest.sourceRevision;
+  }
+  validateManifest(manifest);
+
+  return {
+    ...previousBuild,
+    manifest,
+    manifestUrl: `${publicBaseUrl}/${appConfig.path}/manifest.json`,
   };
 }
 
