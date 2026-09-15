@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.09.15.3349",
+  "manifestVersion": "2026.09.15.3350",
   "defaultChannel": "stable",
-  "updatedAt": "2026-09-15T07:38:30.672Z",
+  "updatedAt": "2026-09-15T13:27:56.145Z",
   "channels": {
     "stable": {
       "app": {
@@ -223,35 +223,35 @@
             "owner": "jellyfin",
             "repo": "jellyfin-ffmpeg"
           },
-          "upstreamVersion": "8.1.2-4",
-          "recommendedVersion": "8.1.2-4",
-          "publishedAt": "2026-09-06T05:30:38Z",
+          "upstreamVersion": "8.1.2-5",
+          "recommendedVersion": "8.1.2-5",
+          "publishedAt": "2026-09-15T07:04:18Z",
           "autoUpdate": true,
           "required": true,
           "notes": "Follows the latest stable upstream release.",
-          "releasePage": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/tag/v8.1.2-4",
+          "releasePage": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/tag/v8.1.2-5",
           "compatibility": {
             "minAppVersion": "1.0.0",
             "maxAppVersion": null
           },
           "platforms": {
             "darwin-arm64": {
-              "artifactName": "jellyfin-ffmpeg_8.1.2-4_portable_macarm64-gpl.tar.xz",
+              "artifactName": "jellyfin-ffmpeg_8.1.2-5_portable_macarm64-gpl.tar.xz",
               "contentType": "application/x-xz",
-              "size": 32900188,
-              "sha256": "1362e5cd8399bb9d648f237b94fff86f864aa9b61a3f239cfcccd77f91bf2649",
+              "size": 32896684,
+              "sha256": "b2ac80bb184e9a2f3f7c236876b2f56a5639596a95b42f41ced34fab66ad720d",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_macarm64-gpl.tar.xz",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-5/jellyfin-ffmpeg_8.1.2-5_portable_macarm64-gpl.tar.xz",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_macarm64-gpl.tar.xz",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-5/jellyfin-ffmpeg_8.1.2-5_portable_macarm64-gpl.tar.xz",
                   "priority": 20,
                   "enabled": true
                 }
@@ -264,22 +264,22 @@
               ]
             },
             "darwin-amd64": {
-              "artifactName": "jellyfin-ffmpeg_8.1.2-4_portable_mac64-gpl.tar.xz",
+              "artifactName": "jellyfin-ffmpeg_8.1.2-5_portable_mac64-gpl.tar.xz",
               "contentType": "application/x-xz",
-              "size": 37845240,
-              "sha256": "d50d288cd321f12f506d91ef3c21cfdec34f160191a556d4da8fe73b3d1b22bd",
+              "size": 37852180,
+              "sha256": "021cd321ea169722cd2e4aca35884305449666a0d231d3378af7f87d6a5626e5",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_mac64-gpl.tar.xz",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-5/jellyfin-ffmpeg_8.1.2-5_portable_mac64-gpl.tar.xz",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_mac64-gpl.tar.xz",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-5/jellyfin-ffmpeg_8.1.2-5_portable_mac64-gpl.tar.xz",
                   "priority": 20,
                   "enabled": true
                 }
@@ -292,22 +292,22 @@
               ]
             },
             "windows-amd64": {
-              "artifactName": "jellyfin-ffmpeg_8.1.2-4_portable_win64-clang-gpl.zip",
+              "artifactName": "jellyfin-ffmpeg_8.1.2-5_portable_win64-clang-gpl.zip",
               "contentType": "application/zip",
-              "size": 67806802,
-              "sha256": "a6821d72985ee6d5a8af16925b468d1c4ec1f652b582a0a2a5039282c26ffca5",
+              "size": 67819203,
+              "sha256": "4bb79f3d1e4092404eafe3fb3b0101e196f8eb00355201f60314e5ba21447b82",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_win64-clang-gpl.zip",
+                  "url": "https://gh-proxy.com/https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-5/jellyfin-ffmpeg_8.1.2-5_portable_win64-clang-gpl.zip",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-4/jellyfin-ffmpeg_8.1.2-4_portable_win64-clang-gpl.zip",
+                  "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v8.1.2-5/jellyfin-ffmpeg_8.1.2-5_portable_win64-clang-gpl.zip",
                   "priority": 20,
                   "enabled": true
                 }
@@ -438,5 +438,5 @@
       }
     }
   },
-  "sourceRevision": "db9cf84f6112c12ee11575552146d21d26eb2017"
+  "sourceRevision": "80d80f26b2729fa7d7ad8559c2258685c82cef78"
 }
