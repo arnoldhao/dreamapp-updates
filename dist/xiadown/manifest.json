@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "appId": "cc.dreamapp.xiadown",
-  "manifestVersion": "2026.10.21.3541",
+  "manifestVersion": "2026.10.21.3542",
   "defaultChannel": "stable",
-  "updatedAt": "2026-10-21T18:14:01.523Z",
+  "updatedAt": "2026-10-21T21:57:05.681Z",
   "channels": {
     "stable": {
       "app": {
@@ -126,13 +126,13 @@
             "owner": "yt-dlp",
             "repo": "yt-dlp"
           },
-          "upstreamVersion": "2026.08.19",
-          "recommendedVersion": "2026.08.19",
-          "publishedAt": "2026-08-19T23:48:43Z",
+          "upstreamVersion": "2026.10.21",
+          "recommendedVersion": "2026.10.21",
+          "publishedAt": "2026-10-21T21:54:37Z",
           "autoUpdate": true,
           "required": true,
           "notes": "Follows the latest stable upstream release.",
-          "releasePage": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.08.19",
+          "releasePage": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.10.21",
           "compatibility": {
             "minAppVersion": "1.0.0",
             "maxAppVersion": null
@@ -141,20 +141,20 @@
             "darwin-arm64": {
               "artifactName": "yt-dlp_macos",
               "contentType": "application/octet-stream",
-              "size": 37146048,
-              "sha256": "0f192b7ec147ab6288885d6351d9ab67367640029b4377576ef46dd79cf7b202",
+              "size": 37180736,
+              "sha256": "7a6fe71d7d680f1fb0ac18d4949873d77db2859e90017c0f44bd94b23be4ee40",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp_macos",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp_macos",
                   "priority": 20,
                   "enabled": true
                 }
@@ -166,20 +166,20 @@
             "darwin-amd64": {
               "artifactName": "yt-dlp_macos",
               "contentType": "application/octet-stream",
-              "size": 37146048,
-              "sha256": "0f192b7ec147ab6288885d6351d9ab67367640029b4377576ef46dd79cf7b202",
+              "size": 37180736,
+              "sha256": "7a6fe71d7d680f1fb0ac18d4949873d77db2859e90017c0f44bd94b23be4ee40",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp_macos",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp_macos",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp_macos",
                   "priority": 20,
                   "enabled": true
                 }
@@ -191,20 +191,20 @@
             "windows-amd64": {
               "artifactName": "yt-dlp.exe",
               "contentType": "application/octet-stream",
-              "size": 17840399,
-              "sha256": "66674953fe251b89f4d08c5f0e35e0728679bd67ab3d7d05c0562af101dd3e7a",
+              "size": 17880111,
+              "sha256": "33121d192d706e62f684a06f80918e3f3a8ba52ac3a65213b6951c39c7d9f555",
               "sources": [
                 {
                   "name": "gh-proxy",
                   "kind": "proxy",
-                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.exe",
+                  "url": "https://gh-proxy.com/https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp.exe",
                   "priority": 10,
                   "enabled": true
                 },
                 {
                   "name": "github",
                   "kind": "origin",
-                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.exe",
+                  "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.10.21/yt-dlp.exe",
                   "priority": 20,
                   "enabled": true
                 }
@@ -438,5 +438,5 @@
       }
     }
   },
-  "sourceRevision": "1aedf6d69a3fd439c2c141451879e5f5e6776137"
+  "sourceRevision": "be753b08fa6f75a335a319abffa5f0edb1d925c6"
 }
